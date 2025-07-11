@@ -8,7 +8,7 @@ const LanguageSwitcher = () => {
   return (
     <div>
       <Select value={i18n.language} onValueChange={(value) => i18n.changeLanguage(value)}>
-        <SelectTrigger className="border-none outline-none ring-0 focus:outline-none focus:ring-0 focus:border-none active:border-none active:outline-none active:ring-0 shadow-none bg-transparent p-1 h-auto">
+        <SelectTrigger className="border-none focus:border-none active:border-none shadow-none p-0">
           <SelectValue placeholder={t('language')} />
         </SelectTrigger>
         <SelectContent>

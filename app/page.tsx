@@ -69,22 +69,23 @@ export default function HomePage() {
             <Link href="/" className="text-xl font-light tracking-wide">
               <Image src={logo} alt="Logo" width={120} height={100} />
             </Link>
-            <div className="flex items-center justify-end space-x-4">
-            <nav className="hidden md:flex space-x-8">
-              <Link href="/" className="text-md text-gray-900 hover:text-gray-600">
-                {t('exhibition')}
-              </Link>
-              <Link href="/artists" className="text-md text-gray-500 hover:text-gray-900">
-                {t('artists')}
-              </Link>
-              <Link href="/about" className="text-md text-gray-500 hover:text-gray-900">
-                {t('about')}
-              </Link>
-              <Link href="/contact" className="text-md text-gray-500 hover:text-gray-900">
-                {t('contact')}
-              </Link>
-            </nav>
-            <LanguageSwitcher />
+            <div className="flex items-center justify-end space-x-6">
+              <nav className="hidden md:flex space-x-8">
+                <Link href="/" className="text-md text-gray-900 hover:text-gray-600">
+                  {t('exhibition')}
+                </Link>
+                <Link href="/artists" className="text-md text-gray-500 hover:text-gray-900">
+                  {t('artists')}
+                </Link>
+                <Link href="/about" className="text-md text-gray-500 hover:text-gray-900">
+                  {t('about')}
+                </Link>
+                <Link href="/contact" className="text-md text-gray-500 hover:text-gray-900">
+                  {t('contact')}
+                </Link>
+              </nav>
+              <p className="text-lg font-thin text-gray-400">|</p>
+              <LanguageSwitcher />
             </div>
           </div>
         </div>
