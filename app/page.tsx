@@ -259,13 +259,14 @@ export default function HomePage() {
               <div className="w-1/2">
                 <h3 className="text-lg font-medium mb-4">{t('purchaseOptions')}</h3>
                 <div className="space-y-2 text-sm text-gray-600">
-                  <div className="flex flex-row items-center gap-2">
+                  <div className="flex flex-row items-center gap-1">
                     <p>• Crypto (ETH, BTC)</p>
                     <Image src="https://cdn3.emoji.gg/emojis/70506-bitcoin.png" alt="bitcoin" width={20} height={20} />
                     <Image src="https://cdn3.emoji.gg/emojis/5819-eth.png" alt="ethereum" width={20} height={20} />
+                    <Image src="https://cdn3.emoji.gg/emojis/6121-tether.png" alt="tether" width={20} height={20} />
                   </div>
                   <p>• {t('traditionalPaymentMethods')}</p>
-                  <div className="flex flex-row items-center gap-2">
+                  <div className="flex flex-row items-center gap-1">
                     <Image src="https://cdn3.emoji.gg/emojis/9437-visa.png" alt="visa" width={30} height={30} />
                     <Image src="https://cdn3.emoji.gg/emojis/6473-mastercard.png" alt="mastercard" width={30} height={30} />
                   </div>
