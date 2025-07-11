@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 import Newsletter from "@/components/newsletter"
-import { ArrowRight, Calendar, MapPin } from "lucide-react"
+import { ArrowRight, Calendar, Instagram, ArrowUpRight, Mail, Phone } from "lucide-react"
 import Image from "next/image"
 import logo from '@/assets/images/logo.webp'
 import { useTranslation } from 'react-i18next'
@@ -303,39 +303,45 @@ export default function HomePage() {
             <div className="md:col-span-2">
               <h3 className="text-lg font-light mb-4">NapulETH Visions</h3>
               <p className="text-sm text-gray-600 mb-4 max-w-md">
-                Contemporary digital art exhibition exploring the convergence of Neapolitan culture and blockchain
-                technology.
+                {t('footerText')}
               </p>
-              <div className="flex space-x-4 text-sm text-gray-500">
-                <a href="#" className="hover:text-gray-900 transition-colors">
-                  Instagram
-                </a>
-                <a href="#" className="hover:text-gray-900 transition-colors">
-                  Twitter
-                </a>
-                <a href="#" className="hover:text-gray-900 transition-colors">
-                  Discord
+              <div className="flex space-x-4 text-base hover:text-gray-900 transition-colors">
+                <a href="https://maps.app.goo.gl/pU2PBu4QamVACR2p8" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900 transition-colors">
+                  <div className="flex flex-row items-center gap-1">
+                    {t('findUs')}
+                    <ArrowUpRight className="w-4 h-4" />
+                  </div>
                 </a>
               </div>
             </div>
             <div>
-              <h4 className="text-sm font-medium mb-4">Exhibition</h4>
+              <h4 className="text-sm font-medium mb-4">{t('exhibition')}</h4>
               <div className="space-y-2 text-sm text-gray-600">
-                <p>17–19 July 2024</p>
+                <p>{t('exhibitionDate')}</p>
                 <p>Villa Doria D'Angri</p>
-                <p>Naples, Italy</p>
+                <p>{t('naples')}, {t('italy')}</p>
               </div>
             </div>
             <div>
-              <h4 className="text-sm font-medium mb-4">Contact</h4>
+              <h4 className="text-sm font-medium mb-4">{t('contact')}</h4>
               <div className="space-y-2 text-sm text-gray-600">
-                <p>info@napulethvisions.art</p>
-                <p>+39 081 123 4567</p>
+                <div className="flex flex-row items-center gap-2">
+                  <Mail className="w-4 h-4" />
+                  <a href="mailto:visions@napuleth.com">visions@napuleth.com</a>
+                </div>
+                <div className="flex flex-row items-center gap-2">
+                  <Phone className="w-4 h-4" />
+                  <a href="tel:+390811234567">+39 081 123 4567</a>
+                </div>
+                <div className="flex flex-row items-center gap-2">
+                  <Instagram className="w-4 h-4" />
+                  <a href="https://www.instagram.com/napuleth.visions/#" target="_blank" rel="noopener noreferrer">napulethvisions</a>
+                </div>
               </div>
             </div>
           </div>
           <div className="border-t border-gray-100 mt-8 pt-8 text-center">
-            <p className="text-xs text-gray-500">© 2024 NapulETH Visions. All rights reserved.</p>
+            <p className="text-xs text-gray-500">{t('copyright')}</p>
           </div>
         </div>
       </footer>
