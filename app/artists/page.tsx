@@ -10,12 +10,12 @@ import { useTranslation } from 'react-i18next'
 import LanguageSwitcher from "@/components/ui/languageSwitcher"
 import i18n from "@/i18n/client"
 import Newsletter from "@/components/newsletter"
-import artists from "@/data/artists"
+import { artists } from "@/data/artists"
 
 
 export default function ArtistsPage() {
   const { t } = useTranslation()
-  if (!i18n.isInitialized) return null
+  if (!i18n || !i18n.isInitialized) return null
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
@@ -28,13 +28,16 @@ export default function ArtistsPage() {
             <div className="flex items-center justify-end space-x-6">
               <nav className="hidden md:flex space-x-8">
                 <Link href="/" className="text-md text-gray-500 hover:text-gray-600">
-                  {t('exhibition')}
+                  {t('home')}
+                </Link>
+                <Link href="/about" className="text-md text-gray-500 hover:text-gray-600">
+                  {t('about')}
                 </Link>
                 <Link href="/artists" className="text-md text-gray-900 hover:text-gray-900">
                   {t('artists')}
                 </Link>
-                <Link href="/about" className="text-md text-gray-500 hover:text-gray-900">
-                  {t('about')}
+                <Link href="/exhibition" className="text-md text-gray-500 hover:text-gray-900">
+                  {t('exhibition')}
                 </Link>
                 <Link href="/contact" className="text-md text-gray-500 hover:text-gray-900">
                   {t('contact')}

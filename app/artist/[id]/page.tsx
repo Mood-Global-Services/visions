@@ -1,8 +1,16 @@
+"use client"
+
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import PurchaseModal from "@/components/purchase-modal-fallback"
 import { ArrowLeft } from "lucide-react"
+import Image from "next/image"
+import logo from '@/assets/images/logo.webp'
+import { useTranslation } from 'react-i18next'
+import LanguageSwitcher from "@/components/ui/languageSwitcher"
+import i18n from "@/i18n/client"
+import { artists, Artist, DetailedWork } from "@/data/artists"
 
 const artistsData = {
   "maria-rossi": {
@@ -70,24 +78,44 @@ const artistsData = {
 }
 
 export default function ArtistPage({ params }: { params: { id: string } }) {
-  const artist = artistsData[params.id as keyof typeof artistsData]
+  const artist = artists.find((artist) => artist.id === params.id)
 
   if (!artist) {
     return <div>Artist not found</div>
   }
 
+  const { t } = useTranslation()
+  if (!i18n || !i18n.isInitialized) return null
+
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-6 py-8">
+        <div className="max-w-7xl mx-auto px-6 py-6">
           <div className="flex items-center justify-between">
-            <Link href="/" className="flex items-center space-x-2 text-sm text-gray-600 hover:text-gray-900">
-              <ArrowLeft className="w-4 h-4" />
-              <span>Back to Exhibition</span>
+            <Link href="/" className="text-xl font-light tracking-wide">
+              <Image src={logo} alt="Logo" width={120} height={100} />
             </Link>
-            <div className="text-right">
-              <h1 className="text-xl font-light">NapulETH Visions</h1>
+            <div className="flex items-center justify-end space-x-6">
+              <nav className="hidden md:flex space-x-8">
+                <Link href="/" className="text-md text-gray-500 hover:text-gray-600">
+                  {t('home')}
+                </Link>
+                <Link href="/about" className="text-md text-gray-500 hover:text-gray-600">
+                  {t('about')}
+                </Link>
+                <Link href="/artists" className="text-md text-gray-900 hover:text-gray-900">
+                  {t('artists')}
+                </Link>
+                <Link href="/exhibition" className="text-md text-gray-500 hover:text-gray-900">
+                  {t('exhibition')}
+                </Link>
+                <Link href="/contact" className="text-md text-gray-500 hover:text-gray-900">
+                  {t('contact')}
+                </Link>
+              </nav>
+              <p className="text-lg font-thin text-gray-400">|</p>
+              <LanguageSwitcher />
             </div>
           </div>
         </div>
@@ -115,7 +143,7 @@ export default function ArtistPage({ params }: { params: { id: string } }) {
       {/* Works */}
       <section className="max-w-7xl mx-auto px-6 pb-16">
         <div className="grid gap-16">
-          {artist.works.map((work) => (
+          {artist.detailedWorks.map((work: DetailedWork) => (
             <div key={work.id} className="grid md:grid-cols-2 gap-12 items-start">
               <Card className="border-0 shadow-none">
                 <CardContent className="p-0">
