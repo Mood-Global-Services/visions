@@ -42,5 +42,15 @@
   "traditionalPaymentMethods": "Traditional Payment Methods",
   "copyright": "© 2025 NapulETH Visions. All rights reserved.",
   "footerText": "Contemporary digital art exhibition exploring the convergence of Neapolitan culture and blockchain technology.",
-  "findUs": "Find Us"
+  "findUs": "Find Us",
+  "thankYou": "Thank you",
+  "subscribed": "You've been subscribed to our newsletter. You'll receive updates about new exhibitions, artist features, and exclusive previews.",
+  "followOnInstagram": "Follow on Instagram",
+  "joinDiscord": "Join Discord",
+  "stayConnected": "Stay Connected with NapulETH Visions",
+  "stayConnectedDescription": "Be the first to know about new exhibitions, exclusive artist interviews, and early access to limited edition releases.",
+  "emailAddress": "Email address",
+  "emailAddressPlaceholder": "Enter your email address",
+  "subscribe": "Subscribe",
+  "privacyPolicy": "We respect your privacy. Unsubscribe at any time."
 }

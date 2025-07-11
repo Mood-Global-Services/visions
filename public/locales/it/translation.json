@@ -42,5 +42,15 @@
     "traditionalPaymentMethods": "Metodi di Pagamento Tradizionali",
     "copyright": "© 2025 NapulETH Visions. Tutti i diritti riservati.",
     "footerText": "Mostra digitale contemporanea che esplora la convergenza della cultura napoletana e della tecnologia blockchain.",
-    "findUs": "Trova Noi"
+    "findUs": "Trova Noi",
+    "thankYou": "Grazie",
+    "subscribed": "Sei stato iscritto al nostro newsletter. Riceverai aggiornamenti sulle nuove mostre, le caratteristiche degli artisti e le anteprime esclusive.",
+    "followOnInstagram": "Segui su Instagram",
+    "joinDiscord": "Unisciti a Discord",
+    "stayConnected": "Rimani Connesso con NapulETH Visions",
+    "stayConnectedDescription": "Sii il primo a sapere sulle nuove mostre, le caratteristiche degli artisti e le anteprime esclusive.",
+    "emailAddress": "Indirizzo email",
+    "emailAddressPlaceholder": "Inserisci il tuo indirizzo email",
+    "subscribe": "Iscriviti",
+    "privacyPolicy": "Rispettiamo la tua privacy. Puoi disiscriverti in qualsiasi momento."
 }
