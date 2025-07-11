@@ -192,19 +192,10 @@ export default function ContactPage() {
                 <div>
                   <h3 className="font-medium mb-1">{t('email')}</h3>
                   <div className="text-sm text-gray-600 space-y-1">
-                    <p>{t('general')}: info@napulethvisions.art</p>
-                    <p>{t('sales')}: sales@napulethvisions.art</p>
-                    <p>{t('press')}: press@napulethvisions.art</p>
+                    <p>{t('general')}: <a href="mailto:info@napulethvisions.art">info@napulethvisions.art</a></p>
+                    <p>{t('sales')}: <a href="mailto:sales@napulethvisions.art">sales@napulethvisions.art</a></p>
+                    <p>{t('press')}: <a href="mailto:press@napulethvisions.art">press@napulethvisions.art</a></p>
                   </div>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <Phone className="w-5 h-5 text-gray-400 mt-1" />
-                <div>
-                  <h3 className="font-medium mb-1">{t('phone')}</h3>
-                  <p className="text-sm text-gray-600">+39 081 123 4567</p>
-                  <p className="text-xs text-gray-500">{t('mondayToFriday')}</p>
                 </div>
               </div>
 
@@ -213,9 +204,9 @@ export default function ContactPage() {
                 <div>
                   <h3 className="font-medium mb-1">{t('exhibitionVenue')}</h3>
                   <div className="text-sm text-gray-600">
-                    <p>Villa Doria D'Angri</p>
-                    <p>Via Posillipo, 123</p>
-                    <p>80123 {t('naples')}, {t('italy')}</p>
+                    <a href="https://maps.app.goo.gl/pU2PBu4QamVACR2p8" target="_blank" rel="noopener noreferrer">
+                      <p>{t('exhibitionDate')}<br />Villa Doria D'Angri<br />{t('naples')}, {t('italy')}</p>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -231,14 +222,15 @@ export default function ContactPage() {
                   </div>
                 </div>
               </div>
-            </div>
 
-            {/* Social Media */}
-            <div className="flex flex-row items-center space-x-3">
-              <h3 className="font-medium">{t('followUs')} : </h3>
-              <div className="flex flex-row items-center space-x-1">
-                <Instagram className="w-4 h-4" />
-                <a href="https://www.instagram.com/napuleth.visions/#" target="_blank" rel="noopener noreferrer">napulethvisions</a>
+              <div className="flex items-start space-x-4">
+                <Instagram className="w-5 h-5 text-gray-400 mt-1" />
+                <div>
+                  <h3 className="font-medium mb-1">{t('followUs')}</h3>
+                  <div className="text-sm text-gray-600">
+                    <a href="https://www.instagram.com/napuleth.visions/#" target="_blank" rel="noopener noreferrer">napulethvisions</a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
