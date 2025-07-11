@@ -11,54 +11,7 @@ import logo from '@/assets/images/logo.webp'
 import { useTranslation } from 'react-i18next'
 import LanguageSwitcher from "@/components/ui/languageSwitcher"
 import i18n from "@/i18n/client"
-
-const artists = [
-  {
-    id: "maria-rossi",
-    name: "Maria Rossi",
-    title: "Digital Metamorphosis",
-    description: "Exploring the intersection of traditional Neapolitan art and blockchain technology",
-    image: "/placeholder.svg?height=500&width=700",
-    works: 8,
-    featured: true,
-  },
-  {
-    id: "giuseppe-verde",
-    name: "Giuseppe Verde",
-    title: "Crypto Vesuvius",
-    description: "Volcanic landscapes reimagined through generative algorithms",
-    image: "/placeholder.svg?height=500&width=700",
-    works: 12,
-    featured: true,
-  },
-  {
-    id: "anna-blu",
-    name: "Anna Blu",
-    title: "Mediterranean Tokens",
-    description: "NFT interpretations of classical Mediterranean motifs",
-    image: "/placeholder.svg?height=500&width=700",
-    works: 6,
-    featured: true,
-  },
-  {
-    id: "franco-nero",
-    name: "Franco Nero",
-    title: "Decentralized Dreams",
-    description: "Abstract compositions inspired by blockchain architecture",
-    image: "/placeholder.svg?height=500&width=700",
-    works: 15,
-    featured: false,
-  },
-  {
-    id: "lucia-bianca",
-    name: "Lucia Bianca",
-    title: "Digital Sirens",
-    description: "Contemporary mythology through digital art and smart contracts",
-    image: "/placeholder.svg?height=500&width=700",
-    works: 9,
-    featured: true,
-  },
-]
+import artists from "@/data/artists"
 
 export default function HomePage() {
   const { t } = useTranslation()
@@ -169,7 +122,6 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {artists
-              .filter((artist) => artist.featured)
               .map((artist) => (
                 <Link key={artist.id} href={`/artist/${artist.id}`} className="group">
                   <Card className="border-0 shadow-sm hover:shadow-lg transition-shadow duration-300">

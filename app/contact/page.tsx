@@ -53,7 +53,7 @@ export default function ContactPage() {
             </Link>
             <div className="flex items-center justify-end space-x-6">
               <nav className="hidden md:flex space-x-8">
-                <Link href="/" className="text-md text-gray-900 hover:text-gray-600">
+                <Link href="/" className="text-md text-gray-500 hover:text-gray-600">
                   {t('exhibition')}
                 </Link>
                 <Link href="/artists" className="text-md text-gray-500 hover:text-gray-900">
@@ -62,7 +62,7 @@ export default function ContactPage() {
                 <Link href="/about" className="text-md text-gray-500 hover:text-gray-900">
                   {t('about')}
                 </Link>
-                <Link href="/contact" className="text-md text-gray-500 hover:text-gray-900">
+                <Link href="/contact" className="text-md text-gray-900 hover:text-gray-900">
                   {t('contact')}
                 </Link>
               </nav>

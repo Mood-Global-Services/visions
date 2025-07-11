@@ -10,55 +10,8 @@ import { useTranslation } from 'react-i18next'
 import LanguageSwitcher from "@/components/ui/languageSwitcher"
 import i18n from "@/i18n/client"
 import Newsletter from "@/components/newsletter"
+import artists from "@/data/artists"
 
-const artists = [
-  {
-    id: "maria-rossi",
-    name: "Maria Rossi",
-    title: "Digital Metamorphosis",
-    description:
-      "Exploring the intersection of traditional Neapolitan art and blockchain technology through immersive digital experiences.",
-    image: "/placeholder.svg?height=600&width=500",
-    works: 8,
-    bio: "Naples-born digital artist seamlessly blending Italian heritage with blockchain innovation.",
-  },
-  {
-    id: "giuseppe-verde",
-    name: "Giuseppe Verde",
-    title: "Crypto Vesuvius",
-    description: "Volcanic landscapes reimagined through generative algorithms and smart contract interactions.",
-    image: "/placeholder.svg?height=600&width=500",
-    works: 12,
-    bio: "Geologist turned digital artist creating stunning volcanic interpretations.",
-  },
-  {
-    id: "anna-blu",
-    name: "Anna Blu",
-    title: "Mediterranean Tokens",
-    description: "NFT interpretations of classical Mediterranean motifs with contemporary blockchain aesthetics.",
-    image: "/placeholder.svg?height=600&width=500",
-    works: 6,
-    bio: "Contemporary artist exploring cultural heritage through digital transformation.",
-  },
-  {
-    id: "franco-nero",
-    name: "Franco Nero",
-    title: "Decentralized Dreams",
-    description: "Abstract compositions inspired by blockchain architecture and decentralized network structures.",
-    image: "/placeholder.svg?height=600&width=500",
-    works: 15,
-    bio: "Abstract artist fascinated by the visual language of decentralized systems.",
-  },
-  {
-    id: "lucia-bianca",
-    name: "Lucia Bianca",
-    title: "Digital Sirens",
-    description: "Contemporary mythology through digital art and smart contracts, reimagining ancient stories.",
-    image: "/placeholder.svg?height=600&width=500",
-    works: 9,
-    bio: "Mythological storyteller bringing ancient narratives into the digital age.",
-  },
-]
 
 export default function ArtistsPage() {
   const { t } = useTranslation()
@@ -74,10 +27,10 @@ export default function ArtistsPage() {
             </Link>
             <div className="flex items-center justify-end space-x-6">
               <nav className="hidden md:flex space-x-8">
-                <Link href="/" className="text-md text-gray-900 hover:text-gray-600">
+                <Link href="/" className="text-md text-gray-500 hover:text-gray-600">
                   {t('exhibition')}
                 </Link>
-                <Link href="/artists" className="text-md text-gray-500 hover:text-gray-900">
+                <Link href="/artists" className="text-md text-gray-900 hover:text-gray-900">
                   {t('artists')}
                 </Link>
                 <Link href="/about" className="text-md text-gray-500 hover:text-gray-900">
