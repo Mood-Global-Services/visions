@@ -210,48 +210,47 @@ export default function HomePage() {
       <section className="max-w-7xl mx-auto px-6 py-20">
         <div className="grid lg:grid-cols-2 gap-16">
           <div>
-            <h2 className="text-3xl font-light mb-8">About the Exhibition</h2>
+            <h2 className="text-3xl font-light mb-8">{t('aboutExhibition')}</h2>
             <div className="space-y-6 text-gray-600 leading-relaxed">
               <p>
-                NapulETH Visions represents a groundbreaking convergence of traditional Neapolitan artistic heritage and
-                cutting-edge blockchain technology. Set within the historic walls of Villa Doria D'Angri, this inaugural
-                exhibition showcases five visionary artists who are redefining the boundaries of digital art.
+                {t('aboutExhibitionPara1')}
               </p>
               <p>
-                Each artwork in the collection exists at the intersection of physical and digital realms, exploring
-                themes of cultural transformation, technological evolution, and the democratization of art through
-                decentralized platforms.
+                {t('aboutExhibitionPara2')}
               </p>
               <p>
-                The exhibition runs from July 17-19, 2024, offering visitors an immersive experience that bridges
-                centuries of artistic tradition with the possibilities of tomorrow.
+                {t('aboutExhibitionPara3')}
               </p>
             </div>
           </div>
 
           <div className="space-y-8">
             <div>
-              <h3 className="text-lg font-medium mb-4">Exhibition Details</h3>
+              <h3 className="text-lg font-medium mb-4">{t('exhibitionDetails')}</h3>
               <div className="space-y-3 text-sm">
                 <div className="flex justify-between">
-                  <span className="text-gray-500">Dates</span>
-                  <span>17–19 July 2024</span>
+                  <span className="text-gray-500">{t('dates')}</span>
+                  <span>{t('exhibitionDate')}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-500">Venue</span>
+                  <span className="text-gray-500">{t('venue')}</span>
                   <span>Villa Doria D'Angri</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-500">Location</span>
-                  <span>Naples, Italy</span>
+                  <span className="text-gray-500">{t('location')}</span>
+                  <span>{t('naples')}, {t('italy')}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-500">Artists</span>
-                  <span>5 Featured</span>
+                  <span className="text-gray-500">{t('fees')}</span>
+                  <span>{t('free')}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-500">Artworks</span>
-                  <span>50+ Pieces</span>
+                  <span className="text-gray-500">{t('artists')}</span>
+                  <span>4 {t('featured')}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-500">{t('artworks')}</span>
+                  <span>13+ {t('pieces')}</span>
                 </div>
               </div>
             </div>

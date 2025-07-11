@@ -18,5 +18,20 @@
   "introPara": "Napuleth Visions is a cultural project and exhibition format born within Napuleth Open Village, promoting dialogue and exchange between the world of Web3 and contemporary art. Conceived by a group of young creatives with transversal skills in art and technology, Napuleth Visions aims to become a recurring event, exploring the intersections between the digital economy, innovation, and artistic practices. The initiative aims not only as an exhibition event, but as a stable and growing platform, with the goal of developing tailored technological solutions to redefine artistic production and enjoyment in the information and digital age.",
   "featuredArtists": "Featured Artists",
   "works": "works",
-  "artistsInfo": "Artists Info"
+  "artistsInfo": "Artists Info",
+  "aboutExhibition": "About the Exhibition",
+  "aboutExhibitionPara1": "NapulETH Visions represents a groundbreaking convergence of traditional Neapolitan artistic heritage and cutting-edge blockchain technology. Set within the historic walls of Villa Doria D'Angri, this inaugural exhibition showcases five visionary artists who are redefining the boundaries of digital art.",
+  "aboutExhibitionPara2": "Each artwork in the collection exists at the intersection of physical and digital realms, exploring themes of cultural transformation, technological evolution, and the democratization of art through decentralized platforms.",
+  "aboutExhibitionPara3": "The exhibition runs from July 17-19, 2024, offering visitors an immersive experience that bridges centuries of artistic tradition with the possibilities of tomorrow.",
+  "exhibitionDetails": "Exhibition Details",
+  "dates": "Dates",
+  "venue": "Venue",
+  "location": "Location",
+  "artworks": "Artworks",
+  "naples": "Naples",
+  "italy": "Italy",
+  "featured": "Featured",
+  "pieces": "Pieces",
+  "fees": "Fees",
+  "free": "The Gallery is free to attend"
 }
