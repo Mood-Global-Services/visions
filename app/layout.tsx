@@ -1,15 +1,15 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Host_Grotesk } from "next/font/google"
 import "./globals.css"
 
-const inter = Inter({ subsets: ["latin"] })
+const hostGrotesk = Host_Grotesk({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "NapulETH Visions - Digital Art Exhibition",
   description:
     "Contemporary digital art exhibition featuring five visionary artists exploring the convergence of Neapolitan culture and blockchain technology.",
-    generator: 'v0.dev'
+  generator: 'v0.dev'
 }
 
 export default function RootLayout({
@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${hostGrotesk.className}`}>{children}</body>
     </html>
   )
 }

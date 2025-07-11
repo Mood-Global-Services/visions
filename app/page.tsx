@@ -1,8 +1,14 @@
+"use client"
+
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import Newsletter from "@/components/newsletter"
 import { ArrowRight, Calendar, MapPin } from "lucide-react"
+import Image from "next/image"
+import logo from '@/assets/images/logo.webp'
+import { useTranslation } from 'react-i18next'
+import LanguageSwitcher from "@/components/ui/languageSwitcher"
 
 const artists = [
   {
@@ -53,6 +59,7 @@ const artists = [
 ]
 
 export default function HomePage() {
+  const { t } = useTranslation()
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
@@ -60,29 +67,32 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-6 py-6">
           <div className="flex items-center justify-between">
             <Link href="/" className="text-xl font-light tracking-wide">
-              NapulETH Visions
+              <Image src={logo} alt="Logo" width={120} height={100} />
             </Link>
+            <div className="flex items-center justify-end space-x-4">
             <nav className="hidden md:flex space-x-8">
-              <Link href="/" className="text-sm text-gray-900 hover:text-gray-600">
-                Exhibition
+              <Link href="/" className="text-md text-gray-900 hover:text-gray-600">
+                {t('exhibition')}
               </Link>
-              <Link href="/artists" className="text-sm text-gray-500 hover:text-gray-900">
-                Artists
+              <Link href="/artists" className="text-md text-gray-500 hover:text-gray-900">
+                {t('artists')}
               </Link>
-              <Link href="/about" className="text-sm text-gray-500 hover:text-gray-900">
-                About
+              <Link href="/about" className="text-md text-gray-500 hover:text-gray-900">
+                {t('about')}
               </Link>
-              <Link href="/contact" className="text-sm text-gray-500 hover:text-gray-900">
-                Contact
+              <Link href="/contact" className="text-md text-gray-500 hover:text-gray-900">
+                {t('contact')}
               </Link>
             </nav>
+            <LanguageSwitcher />
+            </div>
           </div>
         </div>
       </header>
 
       {/* Hero Section */}
       <section className="relative">
-        <div className="max-w-7xl mx-auto px-6 py-20 md:py-32">
+        <div className="max-w-7xl mx-auto px-6 py-20 md:py-16">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
               <div className="space-y-2">
