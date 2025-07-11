@@ -148,6 +148,7 @@ p {
     rgba(255, 255, 255, 0.28) 54%,
     transparent 100%
   );
+  border: solid 1px rgba(38, 38, 38, 1);
   transform: translateX(0) skewX(-20deg);
   filter: blur(4px);
   opacity: 1;
