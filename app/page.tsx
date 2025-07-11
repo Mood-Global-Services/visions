@@ -12,6 +12,7 @@ import { useTranslation } from 'react-i18next'
 import LanguageSwitcher from "@/components/ui/languageSwitcher"
 import i18n from "@/i18n/client"
 import artists from "@/data/artists"
+import windows from "@/assets/images/1.webp"
 
 export default function HomePage() {
   const { t } = useTranslation()
@@ -97,7 +98,7 @@ export default function HomePage() {
               <Card className="border-0 shadow-lg overflow-hidden">
                 <CardContent className="p-0">
                   <img
-                    src="/placeholder.svg?height=600&width=500"
+                    src={windows.src}
                     alt="Villa Doria D'Angri"
                     className="w-full h-[600px] object-cover"
                   />
