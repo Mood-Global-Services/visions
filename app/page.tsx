@@ -29,7 +29,7 @@ const artists = [
     description: "Volcanic landscapes reimagined through generative algorithms",
     image: "/placeholder.svg?height=500&width=700",
     works: 12,
-    featured: false,
+    featured: true,
   },
   {
     id: "anna-blu",
@@ -164,10 +164,10 @@ export default function HomePage() {
       <section className="bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 py-20">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-light mb-4">Featured Artists</h2>
+            <h2 className="text-3xl md:text-4xl font-light mb-4">{t('featuredArtists')}</h2>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {artists
               .filter((artist) => artist.featured)
               .map((artist) => (
@@ -186,7 +186,7 @@ export default function HomePage() {
                         <h4 className="text-gray-600 mb-3">{artist.title}</h4>
                         <p className="text-sm text-gray-500 mb-4 line-clamp-2">{artist.description}</p>
                         <div className="flex items-center justify-between">
-                          <span className="text-xs text-gray-400">{artist.works} works</span>
+                          <span className="text-xs text-gray-400">{artist.works} {t('works')}</span>
                           <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-gray-600 group-hover:translate-x-1 transition-all" />
                         </div>
                       </div>
@@ -199,7 +199,7 @@ export default function HomePage() {
           <div className="text-center mt-12">
             <Link href="/artists">
               <Button variant="outline" className="border-gray-300 text-gray-700 hover:bg-gray-100">
-                View All Artists
+                {t('artistsInfo')}
               </Button>
             </Link>
           </div>
