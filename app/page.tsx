@@ -97,7 +97,6 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
               <div className="space-y-2">
-                <p className="text-sm uppercase tracking-widest text-gray-500 font-medium">Contemporary Digital Art</p>
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-light leading-[0.9] tracking-tight">
                   NapulETH
                   <br />
@@ -109,27 +108,20 @@ export default function HomePage() {
                 <div className="flex items-center space-x-4 text-sm">
                   <div className="flex items-center space-x-2">
                     <Calendar className="w-4 h-4 text-gray-400" />
-                    <span className="text-gray-600">17–19 July 2024</span>
-                  </div>
-                  <div className="w-1 h-1 bg-gray-300 rounded-full" />
-                  <div className="flex items-center space-x-2">
-                    <MapPin className="w-4 h-4 text-gray-400" />
-                    <span className="text-gray-600">Villa Doria D'Angri, Naples</span>
+                    <span className="text-gray-600">{t('exhibitionDate')}</span>
                   </div>
                 </div>
-
                 <div className="bg-gray-50 p-6 rounded-lg">
-                  <h2 className="text-lg font-medium mb-2">Edition 1</h2>
+                  <h2 className="text-lg font-medium mb-2">{t('edition')} 1: Foresta di Cristallo</h2>
                   <p className="text-gray-600 leading-relaxed">
-                    Five visionary artists explore the convergence of Neapolitan culture and blockchain technology in
-                    this inaugural exhibition at the historic Villa Doria D'Angri.
+                    {t('edition1Para')}
                   </p>
                 </div>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/artists">
-                  <Button className="bg-gray-900 text-white hover:bg-gray-800 group">
+                  <Button className="bg-gray-900 text-white hover:bg-gray-800 group shiny-button">
                     View Artists
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Button>
