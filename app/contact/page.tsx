@@ -192,9 +192,7 @@ export default function ContactPage() {
                 <div>
                   <h3 className="font-medium mb-1">{t('email')}</h3>
                   <div className="text-sm text-gray-600 space-y-1">
-                    <p>{t('general')}: <a href="mailto:info@napulethvisions.art">info@napulethvisions.art</a></p>
-                    <p>{t('sales')}: <a href="mailto:sales@napulethvisions.art">sales@napulethvisions.art</a></p>
-                    <p>{t('press')}: <a href="mailto:press@napulethvisions.art">press@napulethvisions.art</a></p>
+                    <p><a href="mailto:visions@napuleth.org">visions@napuleth.org</a></p>
                   </div>
                 </div>
               </div>
@@ -216,8 +214,8 @@ export default function ContactPage() {
                 <div>
                   <h3 className="font-medium mb-1">{t('exhibitionHours')}</h3>
                   <div className="text-sm text-gray-600">
-                    <p>{t('exhibitionDate')}</p>
-                    <p>{t('exhibitionHours')}</p>
+                    <p>{t('exhibitionOpening1')}</p>
+                    <p>{t('exhibitionOpening2')}</p>
                     <p>{t('freeAdmission')}</p>
                   </div>
                 </div>
