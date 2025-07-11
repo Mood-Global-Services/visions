@@ -9,6 +9,7 @@ import Image from "next/image"
 import logo from '@/assets/images/logo.webp'
 import { useTranslation } from 'react-i18next'
 import LanguageSwitcher from "@/components/ui/languageSwitcher"
+import i18n from "@/i18n/client"
 
 const artists = [
   {
@@ -60,6 +61,7 @@ const artists = [
 
 export default function HomePage() {
   const { t } = useTranslation()
+  if (!i18n.isInitialized) return null
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
@@ -97,11 +99,7 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
               <div className="space-y-2">
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-light leading-[0.9] tracking-tight">
-                  NapulETH
-                  <br />
-                  Visions
-                </h1>
+                <Image src={logo} alt="Logo" width={200} height={200} />
               </div>
 
               <div className="space-y-4">
@@ -114,7 +112,7 @@ export default function HomePage() {
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <h2 className="text-lg font-medium mb-2">{t('edition')} 1: Foresta di Cristallo</h2>
                   <p className="text-gray-600 leading-relaxed">
-                    {t('edition1Para')}
+                    {t('shortEdition1Para')}
                   </p>
                 </div>
               </div>
@@ -122,13 +120,13 @@ export default function HomePage() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/artists">
                   <Button className="bg-gray-900 text-white hover:bg-gray-800 group shiny-button">
-                    View Artists
+                    {t('viewArtists')}
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </Link>
                 <Link href="/about">
                   <Button variant="outline" className="border-gray-300 text-gray-700 hover:bg-gray-50">
-                    About the Exhibition
+                    {t('aboutTheExhibition')}
                   </Button>
                 </Link>
               </div>
@@ -145,9 +143,9 @@ export default function HomePage() {
                 </CardContent>
               </Card>
               <div className="absolute -bottom-4 -right-4 bg-white p-4 shadow-lg rounded-lg">
-                <p className="text-xs text-gray-500 mb-1">Featured Venue</p>
+                <p className="text-xs text-gray-500 mb-1">{t('featuredVenue')}</p>
                 <p className="text-sm font-medium">Villa Doria D'Angri</p>
-                <p className="text-xs text-gray-600">Historic Naples</p>
+                <p className="text-xs text-gray-600">{t('historicNaples')}</p>
               </div>
             </div>
           </div>
