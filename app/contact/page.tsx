@@ -9,9 +9,15 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { ArrowLeft, Mail, Phone, MapPin, Clock } from "lucide-react"
+import { ArrowLeft, Mail, Phone, MapPin, Clock, Instagram } from "lucide-react"
+import { useTranslation } from 'react-i18next'
+import Image from "next/image"
+import logo from '@/assets/images/logo.webp'
+import LanguageSwitcher from "@/components/ui/languageSwitcher"
+import i18n from "@/i18n/client"
 
 export default function ContactPage() {
+  const { t } = useTranslation()
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -34,6 +40,8 @@ export default function ContactPage() {
     }))
   }
 
+  if (!i18n.isInitialized) return null
+
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
@@ -41,22 +49,26 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto px-6 py-6">
           <div className="flex items-center justify-between">
             <Link href="/" className="text-xl font-light tracking-wide">
-              NapulETH Visions
+              <Image src={logo} alt="Logo" width={120} height={100} />
             </Link>
-            <nav className="hidden md:flex space-x-8">
-              <Link href="/" className="text-sm text-gray-500 hover:text-gray-900">
-                Exhibition
-              </Link>
-              <Link href="/artists" className="text-sm text-gray-500 hover:text-gray-900">
-                Artists
-              </Link>
-              <Link href="/about" className="text-sm text-gray-500 hover:text-gray-900">
-                About
-              </Link>
-              <Link href="/contact" className="text-sm text-gray-900 hover:text-gray-600">
-                Contact
-              </Link>
-            </nav>
+            <div className="flex items-center justify-end space-x-6">
+              <nav className="hidden md:flex space-x-8">
+                <Link href="/" className="text-md text-gray-900 hover:text-gray-600">
+                  {t('exhibition')}
+                </Link>
+                <Link href="/artists" className="text-md text-gray-500 hover:text-gray-900">
+                  {t('artists')}
+                </Link>
+                <Link href="/about" className="text-md text-gray-500 hover:text-gray-900">
+                  {t('about')}
+                </Link>
+                <Link href="/contact" className="text-md text-gray-500 hover:text-gray-900">
+                  {t('contact')}
+                </Link>
+              </nav>
+              <p className="text-lg font-thin text-gray-400">|</p>
+              <LanguageSwitcher />
+            </div>
           </div>
         </div>
       </header>
@@ -65,17 +77,16 @@ export default function ContactPage() {
       <div className="max-w-7xl mx-auto px-6 py-6">
         <Link href="/" className="inline-flex items-center text-sm text-gray-600 hover:text-gray-900">
           <ArrowLeft className="w-4 h-4 mr-2" />
-          Back to Exhibition
+          {t('backToExhibition')}
         </Link>
       </div>
 
       {/* Page Header */}
       <section className="max-w-7xl mx-auto px-6 pb-16">
         <div className="max-w-3xl">
-          <h1 className="text-4xl md:text-5xl font-light mb-6">Contact Us</h1>
+          <h1 className="text-4xl md:text-5xl font-light mb-6">{t('contactUs')}</h1>
           <p className="text-lg text-gray-600 leading-relaxed">
-            Get in touch with our team for inquiries about the exhibition, artwork purchases, press opportunities, or
-            general information.
+            {t('contactUsDescription')}
           </p>
         </div>
       </section>
@@ -87,7 +98,7 @@ export default function ContactPage() {
           <div>
             <Card className="border border-gray-100">
               <CardHeader>
-                <CardTitle className="text-2xl font-light">Send us a message</CardTitle>
+                <CardTitle className="text-2xl font-light">{t('sendUsAMessage')}</CardTitle>
               </CardHeader>
               <CardContent>
                 {isSubmitted ? (
@@ -95,19 +106,19 @@ export default function ContactPage() {
                     <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Mail className="w-8 h-8 text-green-600" />
                     </div>
-                    <h3 className="text-lg font-medium mb-2">Message Sent</h3>
+                    <h3 className="text-lg font-medium mb-2">{t('messageSent')}</h3>
                     <p className="text-gray-600 mb-6">
-                      Thank you for your message. We'll get back to you within 24 hours.
+                      {t('messageSentDescription')}
                     </p>
                     <Button onClick={() => setIsSubmitted(false)} variant="outline">
-                      Send Another Message
+                      {t('sendAnotherMessage')}
                     </Button>
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
-                        <Label htmlFor="name">Name *</Label>
+                        <Label htmlFor="name">{t('name')} <span className="text-red-500">*</span></Label>
                         <Input
                           id="name"
                           name="name"
@@ -118,7 +129,7 @@ export default function ContactPage() {
                         />
                       </div>
                       <div>
-                        <Label htmlFor="email">Email *</Label>
+                        <Label htmlFor="email">{t('email')} <span className="text-red-500">*</span></Label>
                         <Input
                           id="email"
                           name="email"
@@ -132,7 +143,7 @@ export default function ContactPage() {
                     </div>
 
                     <div>
-                      <Label htmlFor="subject">Subject *</Label>
+                      <Label htmlFor="subject">{t('subject')} <span className="text-red-500">*</span></Label>
                       <Input
                         id="subject"
                         name="subject"
@@ -144,7 +155,7 @@ export default function ContactPage() {
                     </div>
 
                     <div>
-                      <Label htmlFor="message">Message *</Label>
+                      <Label htmlFor="message">{t('message')} <span className="text-red-500">*</span></Label>
                       <Textarea
                         id="message"
                         name="message"
@@ -157,7 +168,7 @@ export default function ContactPage() {
                     </div>
 
                     <Button type="submit" className="w-full bg-gray-900 text-white hover:bg-gray-800">
-                      Send Message
+                      {t('sendMessage')}
                     </Button>
                   </form>
                 )}
@@ -168,10 +179,9 @@ export default function ContactPage() {
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
-              <h2 className="text-2xl font-light mb-6">Get in Touch</h2>
+              <h2 className="text-2xl font-light mb-6">{t('getInTouch')}</h2>
               <p className="text-gray-600 leading-relaxed mb-8">
-                Whether you're interested in purchasing artwork, learning more about the exhibition, or exploring
-                collaboration opportunities, we'd love to hear from you.
+                {t('contactUsDescription')}
               </p>
             </div>
 
@@ -180,11 +190,11 @@ export default function ContactPage() {
               <div className="flex items-start space-x-4">
                 <Mail className="w-5 h-5 text-gray-400 mt-1" />
                 <div>
-                  <h3 className="font-medium mb-1">Email</h3>
+                  <h3 className="font-medium mb-1">{t('email')}</h3>
                   <div className="text-sm text-gray-600 space-y-1">
-                    <p>General: info@napulethvisions.art</p>
-                    <p>Sales: sales@napulethvisions.art</p>
-                    <p>Press: press@napulethvisions.art</p>
+                    <p>{t('general')}: info@napulethvisions.art</p>
+                    <p>{t('sales')}: sales@napulethvisions.art</p>
+                    <p>{t('press')}: press@napulethvisions.art</p>
                   </div>
                 </div>
               </div>
@@ -192,20 +202,20 @@ export default function ContactPage() {
               <div className="flex items-start space-x-4">
                 <Phone className="w-5 h-5 text-gray-400 mt-1" />
                 <div>
-                  <h3 className="font-medium mb-1">Phone</h3>
+                  <h3 className="font-medium mb-1">{t('phone')}</h3>
                   <p className="text-sm text-gray-600">+39 081 123 4567</p>
-                  <p className="text-xs text-gray-500">Monday - Friday, 9:00 AM - 6:00 PM CET</p>
+                  <p className="text-xs text-gray-500">{t('mondayToFriday')}</p>
                 </div>
               </div>
 
               <div className="flex items-start space-x-4">
                 <MapPin className="w-5 h-5 text-gray-400 mt-1" />
                 <div>
-                  <h3 className="font-medium mb-1">Exhibition Venue</h3>
+                  <h3 className="font-medium mb-1">{t('exhibitionVenue')}</h3>
                   <div className="text-sm text-gray-600">
                     <p>Villa Doria D'Angri</p>
                     <p>Via Posillipo, 123</p>
-                    <p>80123 Naples, Italy</p>
+                    <p>80123 {t('naples')}, {t('italy')}</p>
                   </div>
                 </div>
               </div>
@@ -213,32 +223,22 @@ export default function ContactPage() {
               <div className="flex items-start space-x-4">
                 <Clock className="w-5 h-5 text-gray-400 mt-1" />
                 <div>
-                  <h3 className="font-medium mb-1">Exhibition Hours</h3>
+                  <h3 className="font-medium mb-1">{t('exhibitionHours')}</h3>
                   <div className="text-sm text-gray-600">
-                    <p>July 17-19, 2024</p>
-                    <p>10:00 AM - 8:00 PM daily</p>
-                    <p>Free admission</p>
+                    <p>{t('exhibitionDate')}</p>
+                    <p>{t('exhibitionHours')}</p>
+                    <p>{t('freeAdmission')}</p>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Social Media */}
-            <div>
-              <h3 className="font-medium mb-4">Follow Us</h3>
-              <div className="flex space-x-4">
-                <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
-                  Instagram
-                </a>
-                <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
-                  Twitter
-                </a>
-                <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
-                  Discord
-                </a>
-                <a href="#" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
-                  LinkedIn
-                </a>
+            <div className="flex flex-row items-center space-x-3">
+              <h3 className="font-medium">{t('followUs')} : </h3>
+              <div className="flex flex-row items-center space-x-1">
+                <Instagram className="w-4 h-4" />
+                <a href="https://www.instagram.com/napuleth.visions/#" target="_blank" rel="noopener noreferrer">napulethvisions</a>
               </div>
             </div>
           </div>
