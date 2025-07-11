@@ -255,13 +255,33 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div>
-              <h3 className="text-lg font-medium mb-4">Purchase Options</h3>
-              <div className="space-y-2 text-sm text-gray-600">
-                <p>• Cryptocurrency (ETH, BTC)</p>
-                <p>• Traditional payment methods</p>
-                <p>• Immediate digital certificate transfer</p>
-                <p>• Worldwide shipping available</p>
+            <div className="w-full h-fit flex flex-row gap-4 items-stretch justify-between">
+              <div className="w-1/2">
+                <h3 className="text-lg font-medium mb-4">{t('purchaseOptions')}</h3>
+                <div className="space-y-2 text-sm text-gray-600">
+                  <div className="flex flex-row items-center gap-2">
+                    <p>• Crypto (ETH, BTC)</p>
+                    <Image src="https://cdn3.emoji.gg/emojis/70506-bitcoin.png" alt="bitcoin" width={20} height={20} />
+                    <Image src="https://cdn3.emoji.gg/emojis/5819-eth.png" alt="ethereum" width={20} height={20} />
+                  </div>
+                  <p>• {t('traditionalPaymentMethods')}</p>
+                  <div className="flex flex-row items-center gap-2">
+                    <Image src="https://cdn3.emoji.gg/emojis/9437-visa.png" alt="visa" width={30} height={30} />
+                    <Image src="https://cdn3.emoji.gg/emojis/6473-mastercard.png" alt="mastercard" width={30} height={30} />
+                  </div>
+                </div>
+              </div>
+              <div className="self-stretch flex flex-col items-center justify-center py-4">
+                <div className="w-[1px] h-full bg-gray-400">
+
+                </div>
+              </div>
+              <div className="w-1/2">
+                <h3 className="text-lg font-medium mb-4">{t('additionalDetails')}</h3>
+                <div className="space-y-2 text-sm text-gray-600">
+                  <p>• {t('certificate')} ({t('versions')})</p>
+                  <p>• {t('shipping')}</p>
+                </div>
               </div>
             </div>
           </div>

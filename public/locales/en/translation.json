@@ -33,5 +33,11 @@
   "featured": "Featured",
   "pieces": "Pieces",
   "fees": "Fees",
-  "free": "The Gallery is free to attend"
+  "free": "The Gallery is free to attend",
+  "purchaseOptions": "Purchase Options",
+  "certificate": "Immediate Certificate of Authenticity",
+  "versions": "Normal and NFT verions",
+  "shipping": "Worldwide shipping available",
+  "additionalDetails": "Additional Details",
+  "traditionalPaymentMethods": "Traditional Payment Methods"
 }
