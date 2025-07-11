@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 import Newsletter from "@/components/newsletter"
 import { ArrowRight, Calendar, MapPin } from "lucide-react"
@@ -98,22 +99,29 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-6 py-20 md:py-16">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
-              <div className="space-y-2">
-                <Image src={logo} alt="Logo" width={200} height={200} />
-              </div>
-
               <div className="space-y-4">
-                <div className="flex items-center space-x-4 text-sm">
-                  <div className="flex items-center space-x-2">
-                    <Calendar className="w-4 h-4 text-gray-400" />
-                    <span className="text-gray-600">{t('exhibitionDate')}</span>
+                <div className="bg-gray-50 p-6 rounded-lg gap-8 flex flex-col">
+                  <div>
+                    <p className="leading-relaxed">
+                      {t('introPara')}
+                    </p>
                   </div>
                 </div>
-                <div className="bg-gray-50 p-6 rounded-lg">
-                  <h2 className="text-lg font-medium mb-2">{t('edition')} 1: Foresta di Cristallo</h2>
-                  <p className="text-gray-600 leading-relaxed">
-                    {t('shortEdition1Para')}
-                  </p>
+                <div className="bg-gray-50 p-6 rounded-lg gap-8 flex flex-col">
+                  <div>
+                    <h2 className="text-lg font-medium mb-2">{t('edition')} 1: Foresta di Cristallo</h2>
+                    <p className="text-gray-600 leading-relaxed">
+                      {t('shortEdition1Para')}
+                    </p>
+                  </div>
+                  <div className="flex items-center space-x-4 text-sm">
+                    <Badge variant="default" className="shiny-badge">
+                      <div className="flex items-center space-x-2 p-1">
+                        <Calendar className="w-4 h-4" />
+                        <span>{t('exhibitionDate')}</span>
+                      </div>
+                    </Badge>
+                  </div>
                 </div>
               </div>
 

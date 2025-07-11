@@ -14,6 +14,7 @@ if (!i18n.isInitialized) {
     .use(initReactI18next)
     .init({
       fallbackLng: i18nConfig.fallbackLng,
+      preload: ['en', 'it'],
       supportedLngs: i18nConfig.supportedLngs,
       ns: [i18nConfig.defaultNS],
       defaultNS: i18nConfig.defaultNS,
