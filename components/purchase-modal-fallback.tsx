@@ -12,6 +12,8 @@ import { Alert, AlertDescription } from "@/components/ui/alert"
 import { CreditCard, Wallet, CheckCircle, AlertCircle } from "lucide-react"
 import { DetailedWork } from "@/data/artists"
 import Image from "next/image"
+import CheckoutWithCrossmint from "./checkout"
+
 interface PurchaseModalProps {
   work: DetailedWork
 }
@@ -123,6 +125,7 @@ export default function PurchaseModalFallback({ work }: PurchaseModalProps) {
                     0x742d35Cc6634C0532925a3b8D4C9db4C4C4C4C4C
                   </code>
                   <p className="text-xs text-gray-500 mt-2">Transaction will be verified automatically</p>
+                  <CheckoutWithCrossmint></CheckoutWithCrossmint>
                 </div>
               )}
 
