@@ -90,7 +90,7 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                <div className="flex flex-row lg:flex-col items-center lg:items-start justify-center lg:justify-start gap-4">
+                <div className="flex flex-row items-center lg:items-start justify-center lg:justify-start gap-4">
                   <Link href="/artists" className="w-1/2 lg:w-fit">
                     <Button className="bg-gray-900 text-white hover:bg-gray-800 group shiny-button w-full lg:w-fit">
                       {t('viewArtists')}
@@ -259,7 +259,7 @@ export default function HomePage() {
         </section>
 
         {/* Sponsors */}
-        <section className="max-w-7xl mx-auto px-6 py-2 lg:py-20">
+        <section className="max-w-7xl mx-auto px-6 py-2 lg:py-10">
           <Sponsors />
         </section>
 
