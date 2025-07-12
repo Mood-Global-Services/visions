@@ -44,7 +44,7 @@ export default function PurchaseModalFallback({ work }: PurchaseModalProps) {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button className="bg-gray-900 text-white hover:bg-gray-800">Purchase Artwork</Button>
+        <Button className="bg-gray-900 text-white hover:bg-gray-800 shiny-button">Purchase Artwork</Button>
       </DialogTrigger>
       <DialogTitle></DialogTitle>
       <DialogContent className="max-w-md max-h-[90vh] overflow-y-auto">

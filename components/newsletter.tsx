@@ -61,7 +61,7 @@ export default function Newsletter() {
             className="border-gray-300 focus:border-gray-900"
           />
         </div>
-        <Button type="submit" className="bg-gray-900 text-white hover:bg-gray-800 px-8">
+        <Button type="submit" className="bg-gray-900 text-white hover:bg-gray-800 px-8 shiny-button">
           {t('subscribe')}
         </Button>
       </form>

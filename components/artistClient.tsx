@@ -129,61 +129,61 @@ export default function ArtistClient({ artist }: ArtistClientProps) {
             </section>
 
             {/* Newsletter Section */}
-      <section className="border-t border-gray-100 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6 py-16">
-          <Newsletter />
-        </div>
-      </section>
+            <section className="border-t border-gray-100 bg-gray-50">
+                <div className="max-w-7xl mx-auto px-6 py-16">
+                    <Newsletter />
+                </div>
+            </section>
 
-      {/* Footer */}
-      <footer className="border-t border-gray-100">
-        <div className="max-w-7xl mx-auto px-6 py-12">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="md:col-span-2">
-              <h3 className="text-lg font-light mb-4">NapulETH Visions</h3>
-              <p className="text-sm text-gray-600 mb-4 max-w-md">
-                {t('footerText')}
-              </p>
-              <div className="flex space-x-4 text-base hover:text-gray-900 transition-colors">
-                <a href="https://maps.app.goo.gl/pU2PBu4QamVACR2p8" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900 transition-colors">
-                  <div className="flex flex-row items-center gap-1">
-                    {t('findUs')}
-                    <ArrowUpRight className="w-4 h-4" />
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div>
-              <h4 className="text-sm font-medium mb-4">{t('exhibition')}</h4>
-              <div className="space-y-2 text-sm text-gray-600">
-                <p>{t('exhibitionDate')}</p>
-                <p>Villa Doria D'Angri</p>
-                <p>{t('naples')}, {t('italy')}</p>
-              </div>
-            </div>
-            <div>
-              <h4 className="text-sm font-medium mb-4">{t('contact')}</h4>
-              <div className="space-y-2 text-sm text-gray-600">
-                <div className="flex flex-row items-center gap-2">
-                  <Mail className="w-4 h-4" />
-                  <a href="mailto:visions@napuleth.org">visions@napuleth.org</a>
+            {/* Footer */}
+            <footer className="border-t border-gray-100">
+                <div className="max-w-7xl mx-auto px-6 py-12">
+                    <div className="grid md:grid-cols-4 gap-8">
+                        <div className="md:col-span-2">
+                            <h3 className="text-lg font-light mb-4">NapulETH Visions</h3>
+                            <p className="text-sm text-gray-600 mb-4 max-w-md">
+                                {t('footerText')}
+                            </p>
+                            <div className="flex space-x-4 text-base hover:text-gray-900 transition-colors">
+                                <a href="https://maps.app.goo.gl/pU2PBu4QamVACR2p8" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900 transition-colors">
+                                    <div className="flex flex-row items-center gap-1">
+                                        {t('findUs')}
+                                        <ArrowUpRight className="w-4 h-4" />
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 className="text-sm font-medium mb-4">{t('exhibition')}</h4>
+                            <div className="space-y-2 text-sm text-gray-600">
+                                <p>{t('exhibitionDate')}</p>
+                                <p>Villa Doria D'Angri</p>
+                                <p>{t('naples')}, {t('italy')}</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 className="text-sm font-medium mb-4">{t('contact')}</h4>
+                            <div className="space-y-2 text-sm text-gray-600">
+                                <div className="flex flex-row items-center gap-2">
+                                    <Mail className="w-4 h-4" />
+                                    <a href="mailto:visions@napuleth.org">visions@napuleth.org</a>
+                                </div>
+                                <div className="flex flex-row items-center gap-2">
+                                    <Phone className="w-4 h-4" />
+                                    <a href="tel:+390811234567">+39 081 123 4567</a>
+                                </div>
+                                <div className="flex flex-row items-center gap-2">
+                                    <Instagram className="w-4 h-4" />
+                                    <a href="https://www.instagram.com/napuleth.visions/#" target="_blank" rel="noopener noreferrer">napulethvisions</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="border-t border-gray-100 mt-8 pt-8 text-center">
+                        <p className="text-xs text-gray-500">{t('copyright')}</p>
+                    </div>
                 </div>
-                <div className="flex flex-row items-center gap-2">
-                  <Phone className="w-4 h-4" />
-                  <a href="tel:+390811234567">+39 081 123 4567</a>
-                </div>
-                <div className="flex flex-row items-center gap-2">
-                  <Instagram className="w-4 h-4" />
-                  <a href="https://www.instagram.com/napuleth.visions/#" target="_blank" rel="noopener noreferrer">napulethvisions</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="border-t border-gray-100 mt-8 pt-8 text-center">
-            <p className="text-xs text-gray-500">{t('copyright')}</p>
-          </div>
-        </div>
-      </footer>
+            </footer>
         </div>
     )
 }
