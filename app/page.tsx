@@ -320,6 +320,7 @@ export default function HomePage() {
           </div>
         </footer>
       </div>
+      <MobileMenu open={isOpen} onClose={() => setIsOpen(false)} />
     </>
   )
 }
