@@ -1,6 +1,8 @@
 // components/MobileMenu.tsx
 import { useEffect } from 'react'
 import clsx from 'clsx'
+import Image from "next/image"
+import logo from '@/assets/images/logo.webp'
 
 interface MobileMenuProps {
   open: boolean
@@ -9,15 +11,14 @@ interface MobileMenuProps {
 }
 
 const MENU_ITEMS = [
-  { href: '/',         label: 'Home',       id: 'home' },
-  { href: '/about',    label: 'About',      id: 'about' },
-  { href: '/artists',  label: 'Artists',    id: 'artists' },
+  { href: '/', label: 'Home', id: 'home' },
+  { href: '/about', label: 'About', id: 'about' },
+  { href: '/artists', label: 'Artists', id: 'artists' },
   { href: '/exhibition', label: 'Exhibition', id: 'exhibition' },
-  { href: '/contact',  label: 'Contact',    id: 'contact' },
+  { href: '/contact', label: 'Contact', id: 'contact' },
 ]
 
 export default function MobileMenu({ open, onClose, activeItem }: MobileMenuProps) {
-  // lock body scroll when menu is open
   useEffect(() => {
     document.body.classList.toggle('overflow-hidden', open)
     return () => {
@@ -27,7 +28,6 @@ export default function MobileMenu({ open, onClose, activeItem }: MobileMenuProp
 
   return (
     <>
-      {/* Backdrop */}
       <div
         className={clsx(
           'fixed inset-0 bg-black bg-opacity-50 transition-opacity duration-300 ease-in-out z-40',
@@ -39,7 +39,6 @@ export default function MobileMenu({ open, onClose, activeItem }: MobileMenuProp
         onClick={onClose}
       />
 
-      {/* Full-width slide-in panel */}
       <nav
         className={clsx(
           'fixed top-0 left-0 h-full w-full bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 p-6',
@@ -50,13 +49,16 @@ export default function MobileMenu({ open, onClose, activeItem }: MobileMenuProp
         )}
         aria-hidden={!open}
       >
-        <button
-          onClick={onClose}
-          aria-label="Close menu"
-          className="absolute top-4 right-4 text-2xl focus:outline-none"
-        >
-          ×
-        </button>
+        <div className="flex flex-row items-center justify-between">
+          <Image src={logo} alt="Logo" width={80} height={80} />
+          <button
+            onClick={onClose}
+            aria-label="Close menu"
+            className="text-4xl font-light focus:outline-none"
+          >
+            ×
+          </button>
+        </div>
 
         <ul className="mt-10 space-y-6">
           {MENU_ITEMS.map((item, i) => {
