@@ -90,7 +90,7 @@ export default function MobileMenu({ open, onClose, activeItem }: MobileMenuProp
                 </a>
                 {
                   activeItem === item.id && (
-                    <div className="w-1 h-1 bg-black rounded-full"></div>
+                    <div className="w-1 h-1 bg-black rounded-full mt-[1px]"></div>
                   )
                 }
               </li>
