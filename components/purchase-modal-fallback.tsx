@@ -14,7 +14,6 @@ import { DetailedWork } from "@/data/artists"
 import Image from "next/image"
 import CheckoutWithCrossmint from "./checkout"
 
-
 interface PurchaseModalProps {
   work: DetailedWork
 }
