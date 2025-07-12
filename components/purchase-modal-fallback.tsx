@@ -126,7 +126,11 @@ export default function PurchaseModalFallback({ work }: PurchaseModalProps) {
                     0x742d35Cc6634C0532925a3b8D4C9db4C4C4C4C4C
                   </code>
                   <p className="text-xs text-gray-500 mt-2">Transaction will be verified automatically</p>
-                  <CheckoutWithCrossmint></CheckoutWithCrossmint>
+                  {
+                    work.tokenId && (
+                      <CheckoutWithCrossmint tokenId={work.tokenId} nftPriceEth={work.price} />
+                    )
+                  }
                 </div>
               )}
 

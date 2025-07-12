@@ -40,6 +40,7 @@ export interface DetailedWork {
     available: boolean
     technique?: string
     provenance?: string
+    tokenId?: number
 }
 export const artists: Artist[] = [
     {
@@ -57,7 +58,7 @@ export const artists: Artist[] = [
           medium: "Digital Art, NFT",
           dimensions: "3840 × 2160 px",
           year: "2024",
-          price: "2.5 ETH",
+          price: "0.01",
           fiatPrice: "$4,200",
           image: w1.src,
           available: true,
@@ -80,12 +81,13 @@ export const artists: Artist[] = [
           medium: "Digital Art, NFT",
           dimensions: "150x150x150 cm",
           year: "2024",
-          price: "2.5 ETH",
+          price: "0.01",
           fiatPrice: "$4,000",
           image: w2.src,
           available: true,
           technique: "Plastica, Titanio, Ferro, Alluminio, Schiuma Poliuretanica, Vernice A Base D'acqua",
           provenance: "Studio Clarissa Falco, Savona, Italia",
+          tokenId: 2,
         },
       ],
       bio: "Geologist turned digital artist creating stunning volcanic interpretations.",
@@ -105,7 +107,7 @@ export const artists: Artist[] = [
           medium: "Digital Art, NFT",
           dimensions: "3840 × 2160 px",
           year: "2024",
-          price: "2.5 ETH",
+          price: "0.01",
           fiatPrice: "$4,200",
           image: w3.src,
           available: true,
@@ -128,12 +130,13 @@ export const artists: Artist[] = [
           medium: "Digital Art, NFT",
           dimensions: "40x12x8 cm",
           year: "2024",
-          price: "2.5 ETH",
+          price: "0.01",
           fiatPrice: "$3,500",
           image: w4.src,
           available: true,
           technique: "Vetro Borosilicato, Ossigeno, Alluminio, Plexiglass, Servomotori, Raspberry Pi, Raspberry Modulo, Telecamera 3 Noir, Luce a leD",
           provenance: "Studio Lorenzo Lunghi, Milano, Italia",
+          tokenId: 3,
         },
         {
           id: 2,
@@ -141,12 +144,13 @@ export const artists: Artist[] = [
           medium: "Generative Art, Smart Contract",
           dimensions: "50x30 cm",
           year: "2024",
-          price: "1.8 ETH",
+          price: "0.01",
           fiatPrice: "$2,500",
           image: w5.src,
           available: true,
           technique: "Peltro, Stagno",
           provenance: "Studio Lorenzo Lunghi, Milano, Italia",
+          tokenId: 4,
         },
       ],
       bio: "Abstract artist fascinated by the visual language of decentralized systems.",
