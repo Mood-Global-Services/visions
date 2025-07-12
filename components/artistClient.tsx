@@ -14,6 +14,8 @@ import { ArrowUpRight } from 'lucide-react'
 import { Mail, Phone, Instagram, Menu } from 'lucide-react'
 import { useState } from 'react'
 import MobileMenu from '@/components/mobileMenu'
+import { useNftAvailability } from '@/hooks/useNftAvailability'
+import ArtworkCard from '@/components/artworkCard'
 
 interface ArtistClientProps {
     artist: Artist
@@ -86,51 +88,7 @@ export default function ArtistClient({ artist }: ArtistClientProps) {
                 <section className="max-w-7xl mx-auto px-6 pb-16">
                     <div className="grid gap-16">
                         {artist.detailedWorks.map((work: DetailedWork) => (
-                            <div key={work.id} className="grid md:grid-cols-2 gap-12 items-start">
-                                <Card className="border-0 shadow-lg overflow-hidden">
-                                    <CardContent className="p-0">
-                                        <img
-                                            src={work.image || "/placeholder.svg"}
-                                            alt={work.title}
-                                            className="w-full h-[500px] object-cover"
-                                        />
-                                    </CardContent>
-                                </Card>
-
-                                <div className="space-y-6">
-                                    <div>
-                                        <h3 className="text-2xl font-light mb-2">{work.title}</h3>
-                                        <p className="text-sm text-gray-500 mb-4">
-                                            {work.medium} • {work.dimensions} • {work.year}
-                                        </p>
-                                        {
-                                            work.technique && (
-                                                <p className="text-sm text-gray-500 mb-4">
-                                                    Technique: {work.technique}
-                                                </p>
-                                            )
-                                        }
-                                        {
-                                            work.provenance && (
-                                                <p className="text-sm text-gray-500 mb-4">
-                                                    Provenance: {work.provenance}
-                                                </p>
-                                            )
-                                        }
-                                        <div className="flex items-center space-x-4 mb-6">
-                                            <span className="text-lg font-medium">{work.price}</span>
-                                            <span className="text-gray-500">({work.fiatPrice})</span>
-                                        </div>
-                                    </div>
-
-
-                                    {work.available ? (
-                                        <PurchaseModal work={work} />
-                                    ) : (
-                                        <Button disabled className="bg-gray-100 text-gray-400">Sold</Button>
-                                    )}
-                                </div>
-                            </div>
+                            <ArtworkCard key={work.id} work={work} />
                         ))}
                     </div>
                 </section>

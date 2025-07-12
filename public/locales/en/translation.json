@@ -102,5 +102,13 @@
   "foodAndDrink": "Food and Drink",
   "registrationRecommended": "Registration recommended",
   "wheelchairAccessible": "Wheelchair accessible",
-  "audioGuidesAvailable": "Audio guides available"
+  "audioGuidesAvailable": "Audio guides available",
+  "technique": "Technique",
+  "provenance": "Provenance",
+  "dimensions": "Dimensions",
+  "medium": "Medium",
+  "year": "Year",
+  "price": "Price",
+  "fiatPrice": "Fiat Price",
+  "sold": "This Artwork Has Been Sold"
 }

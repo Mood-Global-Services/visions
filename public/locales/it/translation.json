@@ -102,5 +102,13 @@
     "foodAndDrink": "Cibo e Bevande",
     "registrationRecommended": "Registrazione Raccomandata",
     "wheelchairAccessible": "Accessibile per Disabili",
-    "audioGuidesAvailable": "Guida Audio Disponibile"
+    "audioGuidesAvailable": "Guida Audio Disponibile",
+    "technique": "Tecnica",
+    "provenance": "Provenienza",
+    "dimensions": "Dimensioni",
+    "medium": "Media",
+    "year": "Anno",
+    "price": "Prezzo",
+    "fiatPrice": "Prezzo in Fiat",
+    "sold": "Questa Opere è stata Venduta"
 }
