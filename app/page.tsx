@@ -13,7 +13,7 @@ import LanguageSwitcher from "@/components/ui/languageSwitcher"
 import i18n from "@/i18n/client"
 import { artists } from "@/data/artists"
 import windows from "@/assets/images/1.webp"
-
+import Sponsors from "@/components/sponsors"
 export default function HomePage() {
   const { t } = useTranslation()
   if (!i18n || !i18n.isInitialized) return null
@@ -245,6 +245,11 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Sponsors */}
+      <section className="max-w-7xl mx-auto px-6 py-20">
+        <Sponsors />
+      </section>
+
       {/* Newsletter Section */}
       <section className="border-t border-gray-100 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 py-16">
@@ -283,7 +288,7 @@ export default function HomePage() {
               <div className="space-y-2 text-sm text-gray-600">
                 <div className="flex flex-row items-center gap-2">
                   <Mail className="w-4 h-4" />
-                  <a href="mailto:visions@napuleth.com">visions@napuleth.com</a>
+                  <a href="mailto:visions@napuleth.org">visions@napuleth.org</a>
                 </div>
                 <div className="flex flex-row items-center gap-2">
                   <Phone className="w-4 h-4" />

@@ -152,7 +152,7 @@ export default function ArtistsPage() {
               <div className="space-y-2 text-sm text-gray-600">
                 <div className="flex flex-row items-center gap-2">
                   <Mail className="w-4 h-4" />
-                  <a href="mailto:visions@napuleth.com">visions@napuleth.com</a>
+                  <a href="mailto:visions@napuleth.org">visions@napuleth.org</a>
                 </div>
                 <div className="flex flex-row items-center gap-2">
                   <Phone className="w-4 h-4" />

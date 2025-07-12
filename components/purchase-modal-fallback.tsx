@@ -3,24 +3,17 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog"
+import { Dialog, DialogTitle, DialogContent, DialogTrigger } from "@/components/ui/dialog"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Textarea } from "@/components/ui/textarea"
 import { Alert, AlertDescription } from "@/components/ui/alert"
 import { CreditCard, Wallet, CheckCircle, AlertCircle } from "lucide-react"
-
-interface Work {
-  id: number
-  title: string
-  price: string
-  fiatPrice: string
-  image: string
-}
-
+import { DetailedWork } from "@/data/artists"
+import Image from "next/image"
 interface PurchaseModalProps {
-  work: Work
+  work: DetailedWork
 }
 
 export default function PurchaseModalFallback({ work }: PurchaseModalProps) {
@@ -31,6 +24,7 @@ export default function PurchaseModalFallback({ work }: PurchaseModalProps) {
     email: "",
     address: "",
     newsletter: false,
+    terms: false,
   })
 
   const handleInputChange = (field: string, value: string | boolean) => {
@@ -52,6 +46,7 @@ export default function PurchaseModalFallback({ work }: PurchaseModalProps) {
       <DialogTrigger asChild>
         <Button className="bg-gray-900 text-white hover:bg-gray-800">Purchase Artwork</Button>
       </DialogTrigger>
+      <DialogTitle></DialogTitle>
       <DialogContent className="max-w-md max-h-[90vh] overflow-y-auto">
         {step === 1 && (
           <Card className="border-0 shadow-none">
@@ -100,6 +95,25 @@ export default function PurchaseModalFallback({ work }: PurchaseModalProps) {
                   ? "Send payment and provide your details"
                   : "Enter your payment and shipping information"}
               </CardDescription>
+              <CardDescription>
+                {
+                  paymentMethod === "crypto" && (
+                    <div className="flex flex-row items-center gap-1">
+                      <Image src="https://cdn3.emoji.gg/emojis/70506-bitcoin.png" alt="bitcoin" width={20} height={20} />
+                      <Image src="https://cdn3.emoji.gg/emojis/5819-eth.png" alt="ethereum" width={20} height={20} />
+                      <Image src="https://cdn3.emoji.gg/emojis/6121-tether.png" alt="tether" width={20} height={20} />
+                    </div>
+                  )
+                }
+                {
+                  paymentMethod === "fiat" && (
+                    <div className="flex flex-row items-center gap-1">
+                      <Image src="https://cdn3.emoji.gg/emojis/9437-visa.png" alt="visa" width={30} height={30} />
+                      <Image src="https://cdn3.emoji.gg/emojis/6473-mastercard.png" alt="mastercard" width={30} height={30} />
+                    </div>
+                  )
+                }
+              </CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
               {paymentMethod === "crypto" && (
@@ -124,16 +138,6 @@ export default function PurchaseModalFallback({ work }: PurchaseModalProps) {
 
               <div className="space-y-4">
                 <h4 className="font-medium">Your Information</h4>
-                <div>
-                  <Label htmlFor="name">Full Name *</Label>
-                  <Input
-                    id="name"
-                    placeholder="Your full name"
-                    value={formData.name}
-                    onChange={(e) => handleInputChange("name", e.target.value)}
-                    required
-                  />
-                </div>
                 <div>
                   <Label htmlFor="email">Email Address *</Label>
                   <Input
@@ -165,6 +169,18 @@ export default function PurchaseModalFallback({ work }: PurchaseModalProps) {
                   />
                   <Label htmlFor="newsletter" className="text-sm">
                     Subscribe to exhibition updates
+                  </Label>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <input
+                    type="checkbox"
+                    id="terms"
+                    checked={formData.terms}
+                    onChange={(e) => handleInputChange("terms", e.target.checked)}
+                    className="rounded"
+                  />
+                  <Label htmlFor="terms" className="text-sm">
+                    I accept the terms and conditions & privacy policy
                   </Label>
                 </div>
               </div>
@@ -208,7 +224,7 @@ export default function PurchaseModalFallback({ work }: PurchaseModalProps) {
               <Button
                 onClick={() => {
                   setStep(1)
-                  setFormData({ name: "", email: "", address: "", newsletter: false })
+                  setFormData({ name: "", email: "", address: "", newsletter: false, terms: false })
                 }}
                 variant="outline"
                 className="w-full"

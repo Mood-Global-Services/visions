@@ -2,12 +2,15 @@
 
 import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
-import { ArrowLeft, Calendar, MapPin, Users, Palette } from "lucide-react"
+import { ArrowLeft, Calendar, MapPin, Users, Palette, Mail, Phone, Instagram, ArrowUpRight } from "lucide-react"
 import { useTranslation } from 'react-i18next'
 import LanguageSwitcher from "@/components/ui/languageSwitcher"
 import i18n from "@/i18n/client"
 import Image from "next/image"
 import logo from '@/assets/images/logo.webp'
+import image1 from '@/assets/images/1.webp'
+import image2 from '@/assets/images/2.webp'
+import Newsletter from "@/components/newsletter"
 
 export default function ExhibitionPage() {
     const { t } = useTranslation()
@@ -50,17 +53,18 @@ export default function ExhibitionPage() {
             <div className="max-w-7xl mx-auto px-6 py-6">
                 <Link href="/" className="inline-flex items-center text-sm text-gray-600 hover:text-gray-900">
                     <ArrowLeft className="w-4 h-4 mr-2" />
-                    Back to Exhibition
+                    {t('backToExhibition')}
                 </Link>
             </div>
 
             {/* Hero Section */}
             <section className="max-w-7xl mx-auto px-6 py-16">
                 <div className="max-w-4xl">
-                    <h1 className="text-4xl md:text-5xl font-light mb-8">About NapulETH Visions</h1>
+                    <h1 className="text-4xl md:text-5xl font-light mb-8">
+                        {t('aboutNapulETHVisions')}
+                    </h1>
                     <p className="text-xl text-gray-600 leading-relaxed mb-12">
-                        A groundbreaking exhibition exploring the convergence of traditional Neapolitan artistic heritage and
-                        cutting-edge blockchain technology, set within the historic Villa Doria D'Angri.
+                        {t('aboutNapulETHVisionsDescription')}
                     </p>
                 </div>
             </section>
@@ -71,45 +75,34 @@ export default function ExhibitionPage() {
                     <div className="lg:col-span-2 space-y-12">
                         {/* Exhibition Overview */}
                         <div>
-                            <h2 className="text-2xl font-light mb-6">Exhibition Overview</h2>
+                            <h2 className="text-2xl font-light mb-6">
+                                {t('exhibitionOverview')}
+                            </h2>
                             <div className="space-y-6 text-gray-600 leading-relaxed">
                                 <p>
-                                    NapulETH Visions represents more than an art exhibition—it's a cultural bridge connecting centuries of
-                                    Neapolitan artistic tradition with the revolutionary possibilities of blockchain technology. This
-                                    inaugural edition brings together five visionary artists who are redefining the boundaries of digital
-                                    art and cultural expression.
+                                    {t('exhibitionOverviewDescription')}
                                 </p>
                                 <p>
-                                    Set within the magnificent Villa Doria D'Angri, a testament to Naples' rich architectural heritage,
-                                    the exhibition creates a dialogue between past and future, tradition and innovation. Each artwork
-                                    exists at the intersection of physical and digital realms, exploring themes of cultural
-                                    transformation, technological evolution, and the democratization of art through decentralized
-                                    platforms.
-                                </p>
-                                <p>
-                                    The exhibition showcases over 50 unique digital artworks, each authenticated through blockchain
-                                    technology and available for purchase through both traditional and cryptocurrency methods. Visitors
-                                    experience an immersive journey that challenges conventional notions of art ownership, cultural
-                                    preservation, and artistic expression in the digital age.
+                                    {t('exhibitionOverviewDescription2')}
                                 </p>
                             </div>
                         </div>
 
                         {/* Curatorial Statement */}
                         <div>
-                            <h2 className="text-2xl font-light mb-6">Curatorial Statement</h2>
+                            <h2 className="text-2xl font-light mb-6">
+                                {t('curatorialStatement')}
+                            </h2>
                             <div className="space-y-6 text-gray-600 leading-relaxed">
                                 <p>
-                                    "NapulETH Visions emerges from a fundamental question: How do we preserve and evolve cultural identity
-                                    in an increasingly digital world? The artists in this exhibition provide compelling answers through
-                                    their innovative use of blockchain technology as both medium and message."
+                                    {t('curatorialStatementDescription')}
                                 </p>
                                 <p>
-                                    "Each work represents a unique interpretation of Neapolitan culture—from Vesuvius' volcanic energy to
-                                    Mediterranean mythology—reimagined through the lens of decentralized technology. The result is a
-                                    collection that honors tradition while boldly embracing the future."
+                                    {t('curatorialStatementDescription2')}
                                 </p>
-                                <p className="text-sm text-gray-500 italic">— Dr. Elena Marchetti, Chief Curator</p>
+                                <p className="text-sm text-gray-500 italic">
+                                    {t('curatorialStatementSource')}
+                                </p>
                             </div>
                         </div>
 
@@ -120,7 +113,7 @@ export default function ExhibitionPage() {
                                 <Card className="border-0 shadow-lg overflow-hidden">
                                     <CardContent className="p-0">
                                         <img
-                                            src="/placeholder.svg?height=300&width=400"
+                                            src={image1.src}
                                             alt="Villa Doria D'Angri exterior"
                                             className="w-full h-64 object-cover"
                                         />
@@ -129,7 +122,7 @@ export default function ExhibitionPage() {
                                 <Card className="border-0 shadow-lg overflow-hidden">
                                     <CardContent className="p-0">
                                         <img
-                                            src="/placeholder.svg?height=300&width=400"
+                                            src={image2.src}
                                             alt="Villa Doria D'Angri interior"
                                             className="w-full h-64 object-cover"
                                         />
@@ -138,14 +131,10 @@ export default function ExhibitionPage() {
                             </div>
                             <div className="space-y-4 text-gray-600 leading-relaxed">
                                 <p>
-                                    The historic Villa Doria D'Angri serves as the perfect backdrop for this innovative exhibition. Built
-                                    in the 18th century, this architectural masterpiece has witnessed centuries of Neapolitan cultural
-                                    evolution, making it an ideal venue for exploring the intersection of tradition and innovation.
+                                    {t('exhibitionVenueDescription')}
                                 </p>
                                 <p>
-                                    The villa's elegant rooms and gardens provide an immersive environment where digital artworks dialogue
-                                    with classical architecture, creating a unique spatial experience that enhances the conceptual
-                                    framework of the exhibition.
+                                    {t('exhibitionVenueDescription2')}
                                 </p>
                             </div>
                         </div>
@@ -155,34 +144,48 @@ export default function ExhibitionPage() {
                     <div className="space-y-8">
                         {/* Exhibition Facts */}
                         <Card className="border border-gray-100 p-6">
-                            <h3 className="text-lg font-medium mb-6">Exhibition Facts</h3>
+                            <h3 className="text-lg font-medium mb-6">
+                                {t('exhibitionFacts')}
+                            </h3>
                             <div className="space-y-4">
                                 <div className="flex items-start space-x-3">
                                     <Calendar className="w-5 h-5 text-gray-400 mt-0.5" />
                                     <div>
-                                        <p className="text-sm font-medium">Duration</p>
-                                        <p className="text-sm text-gray-600">17–19 July 2024</p>
+                                        <p className="text-sm font-medium">
+                                            {t('duration')}
+                                        </p>
+                                        <p className="text-sm text-gray-600">
+                                            {t('exhibitionDate')}
+                                        </p>
                                     </div>
                                 </div>
                                 <div className="flex items-start space-x-3">
                                     <MapPin className="w-5 h-5 text-gray-400 mt-0.5" />
                                     <div>
-                                        <p className="text-sm font-medium">Location</p>
+                                        <p className="text-sm font-medium">{t('location')}</p>
                                         <p className="text-sm text-gray-600">Villa Doria D'Angri, Naples</p>
                                     </div>
                                 </div>
                                 <div className="flex items-start space-x-3">
                                     <Users className="w-5 h-5 text-gray-400 mt-0.5" />
                                     <div>
-                                        <p className="text-sm font-medium">Artists</p>
-                                        <p className="text-sm text-gray-600">5 Featured Artists</p>
+                                        <p className="text-sm font-medium">
+                                            {t('artists')}
+                                        </p>
+                                        <p className="text-sm text-gray-600">
+                                            4 {t('artists')}
+                                        </p>
                                     </div>
                                 </div>
                                 <div className="flex items-start space-x-3">
                                     <Palette className="w-5 h-5 text-gray-400 mt-0.5" />
                                     <div>
-                                        <p className="text-sm font-medium">Artworks</p>
-                                        <p className="text-sm text-gray-600">50+ Digital Pieces</p>
+                                        <p className="text-sm font-medium">
+                                            {t('artworks')}
+                                        </p>
+                                        <p className="text-sm text-gray-600">
+                                            13+ {t('artworks')}
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -190,51 +193,133 @@ export default function ExhibitionPage() {
 
                         {/* Visiting Information */}
                         <Card className="border border-gray-100 p-6">
-                            <h3 className="text-lg font-medium mb-6">Visiting Information</h3>
+                            <h3 className="text-lg font-medium mb-6">
+                                {t('visitingInformation')}
+                            </h3>
                             <div className="space-y-4 text-sm">
                                 <div>
-                                    <p className="font-medium mb-1">Opening Hours</p>
-                                    <p className="text-gray-600">10:00 AM - 8:00 PM</p>
-                                    <p className="text-gray-600">All three days</p>
+                                    <p className="font-medium mb-1">
+                                        {t('openingHours')}
+                                    </p>
+                                    <p className="text-gray-600">{t('exhibitionOpening1')}</p>
+                                    <p className="text-gray-600">{t('exhibitionOpening2')}</p>
                                 </div>
                                 <div>
-                                    <p className="font-medium mb-1">Admission</p>
-                                    <p className="text-gray-600">Free entry</p>
-                                    <p className="text-gray-600">Registration recommended</p>
+                                    <p className="font-medium mb-1">
+                                        {t('admission')}
+                                    </p>
+                                    <p className="text-gray-600">
+                                        {t('freeAdmission')}
+                                    </p>
+                                    <p className="text-gray-600">
+                                        {t('registrationRecommended')}
+                                    </p>
                                 </div>
                                 <div>
-                                    <p className="font-medium mb-1">Accessibility</p>
-                                    <p className="text-gray-600">Wheelchair accessible</p>
-                                    <p className="text-gray-600">Audio guides available</p>
+                                    <p className="font-medium mb-1">
+                                        {t('accessibility')}
+                                    </p>
+                                    <p className="text-gray-600">
+                                        {t('wheelchairAccessible')}
+                                    </p>
+                                    <p className="text-gray-600">
+                                        {t('audioGuidesAvailable')}
+                                    </p>
                                 </div>
                             </div>
                         </Card>
 
                         {/* Contact */}
                         <Card className="border border-gray-100 p-6">
-                            <h3 className="text-lg font-medium mb-6">Contact</h3>
+                            <h3 className="text-lg font-medium mb-6">
+                                {t('contact')}
+                            </h3>
                             <div className="space-y-3 text-sm">
                                 <div>
-                                    <p className="font-medium">General Inquiries</p>
-                                    <p className="text-gray-600">info@napulethvisions.art</p>
+                                    <p className="font-medium">
+                                        {t('email')}
+                                    </p>
+                                    <a href="mailto:visions@napuleth.org">
+                                        <p className="text-gray-600">visions@napuleth.org</p>
+                                    </a>
                                 </div>
                                 <div>
-                                    <p className="font-medium">Press</p>
-                                    <p className="text-gray-600">press@napulethvisions.art</p>
-                                </div>
-                                <div>
-                                    <p className="font-medium">Sales</p>
-                                    <p className="text-gray-600">sales@napulethvisions.art</p>
-                                </div>
-                                <div>
-                                    <p className="font-medium">Phone</p>
+                                    <p className="font-medium">
+                                        {t('phone')}
+                                    </p>
                                     <p className="text-gray-600">+39 081 123 4567</p>
+                                </div>
+                                <div>
+                                    <p className="font-medium">
+                                        Instagram
+                                    </p>
+                                    <a href="https://www.instagram.com/napuleth.visions/#" target="_blank" rel="noopener noreferrer">
+                                        <p className="text-gray-600">napulethvisions</p>
+                                    </a>
                                 </div>
                             </div>
                         </Card>
+
                     </div>
+
                 </div>
             </section>
+            {/* Newsletter Section */}
+            <section className="border-t border-gray-100 bg-gray-50">
+                <div className="max-w-7xl mx-auto px-6 py-16">
+                    <Newsletter />
+                </div>
+            </section>
+
+            {/* Footer */}
+            <footer className="border-t border-gray-100">
+                <div className="max-w-7xl mx-auto px-6 py-12">
+                    <div className="grid md:grid-cols-4 gap-8">
+                        <div className="md:col-span-2">
+                            <h3 className="text-lg font-light mb-4">NapulETH Visions</h3>
+                            <p className="text-sm text-gray-600 mb-4 max-w-md">
+                                {t('footerText')}
+                            </p>
+                            <div className="flex space-x-4 text-base hover:text-gray-900 transition-colors">
+                                <a href="https://maps.app.goo.gl/pU2PBu4QamVACR2p8" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900 transition-colors">
+                                    <div className="flex flex-row items-center gap-1">
+                                        {t('findUs')}
+                                        <ArrowUpRight className="w-4 h-4" />
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 className="text-sm font-medium mb-4">{t('exhibition')}</h4>
+                            <div className="space-y-2 text-sm text-gray-600">
+                                <p>{t('exhibitionDate')}</p>
+                                <p>Villa Doria D'Angri</p>
+                                <p>{t('naples')}, {t('italy')}</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 className="text-sm font-medium mb-4">{t('contact')}</h4>
+                            <div className="space-y-2 text-sm text-gray-600">
+                                <div className="flex flex-row items-center gap-2">
+                                    <Mail className="w-4 h-4" />
+                                    <a href="mailto:visions@napuleth.org">visions@napuleth.org</a>
+                                </div>
+                                <div className="flex flex-row items-center gap-2">
+                                    <Phone className="w-4 h-4" />
+                                    <a href="tel:+390811234567">+39 081 123 4567</a>
+                                </div>
+                                <div className="flex flex-row items-center gap-2">
+                                    <Instagram className="w-4 h-4" />
+                                    <a href="https://www.instagram.com/napuleth.visions/#" target="_blank" rel="noopener noreferrer">napulethvisions</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="border-t border-gray-100 mt-8 pt-8 text-center">
+                        <p className="text-xs text-gray-500">{t('copyright')}</p>
+                    </div>
+                </div>
+            </footer>
         </div>
     )
 }

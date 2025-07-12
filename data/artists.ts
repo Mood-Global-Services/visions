@@ -3,6 +3,19 @@ import a2 from "@/assets/images/artists/ClarissaFalco.webp"
 import a3 from "@/assets/images/artists/EmilioVavarella.webp"
 import a4 from "@/assets/images/artists/LorenzoLunghi.webp"
 
+// Adriano Tenore works
+import w1 from "@/assets/images/artworks/AdrianoTenore/1.webp"
+
+// Clarissa Falco
+import w2 from "@/assets/images/artworks/ClarissaFalco/1.webp"
+
+// Emilio Vavarella works
+import w3 from "@/assets/images/artworks/EmilioVavarella/1.webp"
+
+// Lorenzo Lunghi
+import w4 from "@/assets/images/artworks/LorenzoLunghi/1.webp"
+import w5 from "@/assets/images/artworks/LorenzoLunghi/2.webp"
+
 export interface Artist {
     id: string
     name: string
@@ -25,6 +38,8 @@ export interface DetailedWork {
     fiatPrice: string
     image: string
     available: boolean
+    technique?: string
+    provenance?: string
 }
 export const artists: Artist[] = [
     {
@@ -34,7 +49,7 @@ export const artists: Artist[] = [
       description:
         "Exploring the intersection of traditional Neapolitan art and blockchain technology through immersive digital experiences.",
       image: a1.src,
-      works: 8,
+      works: 1,
       detailedWorks:[
         {
           id: 1,
@@ -44,30 +59,8 @@ export const artists: Artist[] = [
           year: "2024",
           price: "2.5 ETH",
           fiatPrice: "$4,200",
-          image: "/placeholder.svg?height=600&width=800",
+          image: w1.src,
           available: true,
-        },
-        {
-          id: 2,
-          title: "Mediterranean Cipher",
-          medium: "Generative Art, Smart Contract",
-          dimensions: "4096 × 4096 px",
-          year: "2024",
-          price: "1.8 ETH",
-          fiatPrice: "$3,000",
-          image: "/placeholder.svg?height=600&width=800",
-          available: true,
-        },
-        {
-          id: 3,
-          title: "Neapolitan Dreams",
-          medium: "Digital Collage, Blockchain",
-          dimensions: "2048 × 3072 px",
-          year: "2024",
-          price: "3.2 ETH",
-          fiatPrice: "$5,400",
-          image: "/placeholder.svg?height=600&width=800",
-          available: false,
         },
       ],
       bio: "Naples-born digital artist seamlessly blending Italian heritage with blockchain innovation.",
@@ -79,40 +72,20 @@ export const artists: Artist[] = [
       title: "Crypto Vesuvius",
       description: "Volcanic landscapes reimagined through generative algorithms and smart contract interactions.",
       image: a2.src,
-      works: 12,
+      works: 1,
       detailedWorks:[
         {
           id: 1,
-          title: "Vesuvian Genesis #1",
+          title: "Dream Of A Synthetic Body#3",
           medium: "Digital Art, NFT",
-          dimensions: "3840 × 2160 px",
+          dimensions: "150x150x150 cm",
           year: "2024",
           price: "2.5 ETH",
-          fiatPrice: "$4,200",
-          image: "/placeholder.svg?height=600&width=800",
+          fiatPrice: "$4,000",
+          image: w2.src,
           available: true,
-        },
-        {
-          id: 2,
-          title: "Mediterranean Cipher",
-          medium: "Generative Art, Smart Contract",
-          dimensions: "4096 × 4096 px",
-          year: "2024",
-          price: "1.8 ETH",
-          fiatPrice: "$3,000",
-          image: "/placeholder.svg?height=600&width=800",
-          available: true,
-        },
-        {
-          id: 3,
-          title: "Neapolitan Dreams",
-          medium: "Digital Collage, Blockchain",
-          dimensions: "2048 × 3072 px",
-          year: "2024",
-          price: "3.2 ETH",
-          fiatPrice: "$5,400",
-          image: "/placeholder.svg?height=600&width=800",
-          available: false,
+          technique: "Plastica, Titanio, Ferro, Alluminio, Schiuma Poliuretanica, Vernice A Base D'acqua",
+          provenance: "Studio Clarissa Falco, Savona, Italia",
         },
       ],
       bio: "Geologist turned digital artist creating stunning volcanic interpretations.",
@@ -124,7 +97,7 @@ export const artists: Artist[] = [
       title: "Mediterranean Tokens",
       description: "NFT interpretations of classical Mediterranean motifs with contemporary blockchain aesthetics.",
       image: a3.src,
-      works: 6,
+      works: 1,
       detailedWorks:[
         {
           id: 1,
@@ -134,30 +107,8 @@ export const artists: Artist[] = [
           year: "2024",
           price: "2.5 ETH",
           fiatPrice: "$4,200",
-          image: "/placeholder.svg?height=600&width=800",
+          image: w3.src,
           available: true,
-        },
-        {
-          id: 2,
-          title: "Mediterranean Cipher",
-          medium: "Generative Art, Smart Contract",
-          dimensions: "4096 × 4096 px",
-          year: "2024",
-          price: "1.8 ETH",
-          fiatPrice: "$3,000",
-          image: "/placeholder.svg?height=600&width=800",
-          available: true,
-        },
-        {
-          id: 3,
-          title: "Neapolitan Dreams",
-          medium: "Digital Collage, Blockchain",
-          dimensions: "2048 × 3072 px",
-          year: "2024",
-          price: "3.2 ETH",
-          fiatPrice: "$5,400",
-          image: "/placeholder.svg?height=600&width=800",
-          available: false,
         },
       ],
       bio: "Contemporary artist exploring cultural heritage through digital transformation.",
@@ -169,40 +120,33 @@ export const artists: Artist[] = [
       title: "Decentralized Dreams",
       description: "Abstract compositions inspired by blockchain architecture and decentralized network structures.",
       image: a4.src,
-      works: 15,
+      works: 2,
       detailedWorks:[
         {
           id: 1,
-          title: "Vesuvian Genesis #1",
+          title: "Spie (Fontana V.2)",
           medium: "Digital Art, NFT",
-          dimensions: "3840 × 2160 px",
+          dimensions: "40x12x8 cm",
           year: "2024",
           price: "2.5 ETH",
-          fiatPrice: "$4,200",
-          image: "/placeholder.svg?height=600&width=800",
+          fiatPrice: "$3,500",
+          image: w4.src,
           available: true,
+          technique: "Vetro Borosilicato, Ossigeno, Alluminio, Plexiglass, Servomotori, Raspberry Pi, Raspberry Modulo, Telecamera 3 Noir, Luce a leD",
+          provenance: "Studio Lorenzo Lunghi, Milano, Italia",
         },
         {
           id: 2,
-          title: "Mediterranean Cipher",
+          title: "Vomito",
           medium: "Generative Art, Smart Contract",
-          dimensions: "4096 × 4096 px",
+          dimensions: "50x30 cm",
           year: "2024",
           price: "1.8 ETH",
-          fiatPrice: "$3,000",
-          image: "/placeholder.svg?height=600&width=800",
+          fiatPrice: "$2,500",
+          image: w5.src,
           available: true,
-        },
-        {
-          id: 3,
-          title: "Neapolitan Dreams",
-          medium: "Digital Collage, Blockchain",
-          dimensions: "2048 × 3072 px",
-          year: "2024",
-          price: "3.2 ETH",
-          fiatPrice: "$5,400",
-          image: "/placeholder.svg?height=600&width=800",
-          available: false,
+          technique: "Peltro, Stagno",
+          provenance: "Studio Lorenzo Lunghi, Milano, Italia",
         },
       ],
       bio: "Abstract artist fascinated by the visual language of decentralized systems.",
