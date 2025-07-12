@@ -87,7 +87,7 @@ export const artists: Artist[] = [
           available: true,
           technique: "Plastica, Titanio, Ferro, Alluminio, Schiuma Poliuretanica, Vernice A Base D'acqua",
           provenance: "Studio Clarissa Falco, Savona, Italia",
-          tokenId: 2,
+          tokenId: 1,
         },
       ],
       bio: "Geologist turned digital artist creating stunning volcanic interpretations.",
