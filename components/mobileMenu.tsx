@@ -5,16 +5,18 @@ import clsx from 'clsx'
 interface MobileMenuProps {
   open: boolean
   onClose: () => void
+  activeItem: string
 }
 
 const MENU_ITEMS = [
-  { href: '#home', label: 'Home' },
-  { href: '#about', label: 'About' },
-  { href: '#services', label: 'Services' },
-  { href: '#contact', label: 'Contact' },
+  { href: '/',         label: 'Home',       id: 'home' },
+  { href: '/about',    label: 'About',      id: 'about' },
+  { href: '/artists',  label: 'Artists',    id: 'artists' },
+  { href: '/exhibition', label: 'Exhibition', id: 'exhibition' },
+  { href: '/contact',  label: 'Contact',    id: 'contact' },
 ]
 
-export default function MobileMenu({ open, onClose }: MobileMenuProps) {
+export default function MobileMenu({ open, onClose, activeItem }: MobileMenuProps) {
   // lock body scroll when menu is open
   useEffect(() => {
     document.body.classList.toggle('overflow-hidden', open)
@@ -58,14 +60,13 @@ export default function MobileMenu({ open, onClose }: MobileMenuProps) {
 
         <ul className="mt-10 space-y-6">
           {MENU_ITEMS.map((item, i) => {
-            // bottom item (last in array) appears first
             const delay = (MENU_ITEMS.length - i) * 100
             return (
               <li
-                key={item.href}
+                key={item.id}
                 style={{ transitionDelay: `${delay}ms` }}
                 className={clsx(
-                  'transform transition-all duration-300 ease-out',
+                  'transform transition-all duration-300 ease-out flex flex-row items-center gap-2',
                   {
                     'translate-y-5 opacity-0': !open,
                     'translate-y-0 opacity-100': open,
@@ -75,10 +76,21 @@ export default function MobileMenu({ open, onClose }: MobileMenuProps) {
                 <a
                   href={item.href}
                   onClick={onClose}
-                  className="text-lg hover:text-blue-600 block"
+                  className={clsx(
+                    'text-lg block transition-colors duration-200',
+                    {
+                      'text-black': activeItem === item.id,
+                      'text-gray-500 hover:text-gray-700': activeItem !== item.id,
+                    }
+                  )}
                 >
                   {item.label}
                 </a>
+                {
+                  activeItem === item.id && (
+                    <div className="w-1 h-1 bg-black rounded-full"></div>
+                  )
+                }
               </li>
             )
           })}
