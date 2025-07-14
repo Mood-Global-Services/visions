@@ -13,7 +13,7 @@ import { useTranslation } from 'react-i18next'
 import LanguageSwitcher from "@/components/ui/languageSwitcher"
 import i18n from "@/i18n/client"
 import { artists } from "@/data/artists"
-import windows from "@/assets/images/1.webp"
+import windows from "@/assets/images/4.webp"
 import Sponsors from "@/components/sponsors"
 import MobileMenu from "@/components/mobileMenu"
 
@@ -115,7 +115,7 @@ export default function HomePage() {
                     />
                   </CardContent>
                 </Card>
-                <div className="absolute -bottom-10 lg:-bottom-4 right-0 left-0 bg-white p-4 shadow-lg rounded-lg w-fit mx-auto">
+                <div className="absolute -bottom-10 lg:-bottom-4 right-0 left-0 lg:-right-4 lg:left-auto bg-white p-4 shadow-lg rounded-lg w-fit mx-auto">
                   <p className="text-xs text-center lg:text-left text-gray-500 mb-1">{t('featuredVenue')}</p>
                   <p className="text-sm text-center lg:text-left font-medium">Villa Doria D'Angri</p>
                   <p className="text-xs text-center lg:text-left text-gray-600">{t('historicNaples')}</p>
