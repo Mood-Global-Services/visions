@@ -11,6 +11,7 @@ import Image from "next/image"
 import logo from '@/assets/images/logo.webp'
 import image1 from '@/assets/images/1.webp'
 import image2 from '@/assets/images/2.webp'
+import placeholder from "@/assets/images/placeholder.webp"
 import Newsletter from "@/components/newsletter"
 import MobileMenu from "@/components/mobileMenu"
 import { useState } from "react"
@@ -118,8 +119,8 @@ export default function ExhibitionPage() {
                                     <Card className="border-0 shadow-lg overflow-hidden">
                                         <CardContent className="p-0">
                                             <img
-                                                src={image1.src}
-                                                alt="Villa Doria D'Angri exterior"
+                                                src={placeholder.src}
+                                                alt="Villa Doria D'Angri interior"
                                                 className="w-full h-64 object-cover"
                                             />
                                         </CardContent>
@@ -127,7 +128,25 @@ export default function ExhibitionPage() {
                                     <Card className="border-0 shadow-lg overflow-hidden">
                                         <CardContent className="p-0">
                                             <img
-                                                src={image2.src}
+                                                src={placeholder.src}
+                                                alt="Villa Doria D'Angri interior"
+                                                className="w-full h-64 object-cover"
+                                            />
+                                        </CardContent>
+                                    </Card>
+                                    <Card className="border-0 shadow-lg overflow-hidden">
+                                        <CardContent className="p-0">
+                                            <img
+                                                src={placeholder.src}
+                                                alt="Villa Doria D'Angri interior"
+                                                className="w-full h-64 object-cover"
+                                            />
+                                        </CardContent>
+                                    </Card>
+                                    <Card className="border-0 shadow-lg overflow-hidden">
+                                        <CardContent className="p-0">
+                                            <img
+                                                src={placeholder.src}
                                                 alt="Villa Doria D'Angri interior"
                                                 className="w-full h-64 object-cover"
                                             />
