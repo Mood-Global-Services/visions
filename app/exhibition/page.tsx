@@ -128,7 +128,7 @@ export default function ExhibitionPage() {
 
                             {/* The Venue */}
                             <div>
-                                <h2 className="text-2xl font-light mb-6">{t('installationView')}i</h2>
+                                <h2 className="text-2xl font-light mb-6">{t('installationView')}</h2>
                                 <div className="grid md:grid-cols-2 gap-8 mb-6">
                                     <Card className="border-0 shadow-lg overflow-hidden">
                                         <CardContent className="p-0">
