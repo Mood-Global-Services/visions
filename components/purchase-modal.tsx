@@ -146,7 +146,7 @@ export default function PurchaseModal({ work, price }: PurchaseModalProps) {
             <h2 className="text-xl font-light">{work.title}</h2>
             <div className="flex flex-row items-center space-x-1 mb-6">
               <h5 className="text-lg font-medium">{price}ETH</h5>
-              <h6 className="text-gray-500">({work.fiatPrice})</h6>
+              <h6 className="text-gray-500">({work.fiatPrice}€)</h6>
             </div>
             <div className="space-y-4">
               <div>
