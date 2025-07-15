@@ -97,9 +97,9 @@ export default function HomePage() {
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </Button>
                   </Link>
-                  <Link href="/about" className="w-1/2 lg:w-fit">
+                  <Link href="/exhibition" className="w-1/2 lg:w-fit">
                     <Button variant="outline" className="border-gray-300 text-gray-700 hover:bg-gray-50 w-full lg:w-fit">
-                      {t('aboutTheExhibition')}
+                      {t('exhibition')}
                     </Button>
                   </Link>
                 </div>
