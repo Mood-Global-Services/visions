@@ -7,6 +7,8 @@ import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 import Newsletter from "@/components/newsletter"
 import { ArrowRight, Calendar, Instagram, ArrowUpRight, Mail, Phone, Menu } from "lucide-react"
+import { FaTelegramPlane } from "react-icons/fa";
+
 import Image from "next/image"
 import logo from '@/assets/images/logo.webp'
 import { useTranslation } from 'react-i18next'
@@ -14,6 +16,7 @@ import LanguageSwitcher from "@/components/ui/languageSwitcher"
 import i18n from "@/i18n/client"
 import { artists } from "@/data/artists"
 import windows from "@/assets/images/4.webp"
+import image2 from "@/assets/images/2.webp"
 import Sponsors from "@/components/sponsors"
 import MobileMenu from "@/components/mobileMenu"
 
@@ -65,14 +68,14 @@ export default function HomePage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-16 items-center">
               <div className="space-y-6 lg:space-y-8 order-2 lg:order-1">
                 <div className="space-y-4">
-                  <div className="bg-gray-50 p-6 rounded-lg gap-8 flex flex-col">
+                  <div className=" gap-8 flex flex-col">
                     <div>
                       <p className="leading-relaxed">
                         {t('introPara')}
                       </p>
                     </div>
                   </div>
-                  <div className="bg-gray-50 p-6 rounded-lg gap-8 flex flex-col">
+                  <div className=" gap-8 flex flex-col">
                     <div>
                       <h2 className="text-lg font-medium mb-2">{t('edition')} 1: Foresta di Cristallo</h2>
                       <p className="text-gray-600 leading-relaxed">
@@ -115,11 +118,6 @@ export default function HomePage() {
                     />
                   </CardContent>
                 </Card>
-                <div className="absolute -bottom-10 lg:-bottom-4 right-0 left-0 lg:-right-4 lg:left-auto bg-white p-4 shadow-lg rounded-lg w-fit mx-auto">
-                  <p className="text-xs text-center lg:text-left text-gray-500 mb-1">{t('featuredVenue')}</p>
-                  <p className="text-sm text-center lg:text-left font-medium">Villa Doria D'Angri</p>
-                  <p className="text-xs text-center lg:text-left text-gray-600">{t('historicNaples')}</p>
-                </div>
               </div>
             </div>
           </div>
@@ -147,8 +145,6 @@ export default function HomePage() {
                         </div>
                         <div className="p-6">
                           <h3 className="text-xl font-light mb-2">{artist.name}</h3>
-                          <h4 className="text-gray-600 mb-3">{artist.title}</h4>
-                          <p className="text-sm text-gray-500 mb-4 line-clamp-2">{artist.description}</p>
                           <div className="flex items-center justify-between">
                             <span className="text-xs text-gray-400">{artist.works} {t('works')}</span>
                             <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-gray-600 group-hover:translate-x-1 transition-all" />
@@ -173,18 +169,10 @@ export default function HomePage() {
         {/* Exhibition Details */}
         <section className="max-w-7xl mx-auto px-6 py-20">
           <div className="grid lg:grid-cols-2 gap-16">
-            <div>
+            <div className="relative h-full">
               <h2 className="text-3xl font-light mb-8">{t('aboutExhibition')}</h2>
-              <div className="space-y-6 text-gray-600 leading-relaxed">
-                <p>
-                  {t('aboutExhibitionPara1')}
-                </p>
-                <p>
-                  {t('aboutExhibitionPara2')}
-                </p>
-                <p>
-                  {t('aboutExhibitionPara3')}
-                </p>
+              <div className="space-y-6 text-gray-600 leading-relaxed overflow-hidden">
+                <Image src={image2} alt="Exhibition" fill className="object-cover rounded-lg" />
               </div>
             </div>
 
@@ -205,16 +193,12 @@ export default function HomePage() {
                     <span>{t('naples')}, {t('italy')}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-gray-500">{t('fees')}</span>
-                    <span>{t('free')}</span>
-                  </div>
-                  <div className="flex justify-between">
                     <span className="text-gray-500">{t('artists')}</span>
                     <span>4 {t('featured')}</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-gray-500">{t('artworks')}</span>
-                    <span>13+ {t('pieces')}</span>
+                    <span>13 {t('pieces')}</span>
                   </div>
                 </div>
               </div>
@@ -274,28 +258,6 @@ export default function HomePage() {
         <footer className="border-t border-gray-100">
           <div className="max-w-7xl mx-auto px-6 py-12">
             <div className="grid md:grid-cols-4 gap-8">
-              <div className="md:col-span-2">
-                <h3 className="text-lg font-light mb-4">NapulETH Visions</h3>
-                <p className="text-sm text-gray-600 mb-4 max-w-md">
-                  {t('footerText')}
-                </p>
-                <div className="flex space-x-4 text-base hover:text-gray-900 transition-colors">
-                  <a href="https://maps.app.goo.gl/pU2PBu4QamVACR2p8" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900 transition-colors">
-                    <div className="flex flex-row items-center gap-1">
-                      {t('findUs')}
-                      <ArrowUpRight className="w-4 h-4" />
-                    </div>
-                  </a>
-                </div>
-              </div>
-              <div>
-                <h4 className="text-sm font-medium mb-4">{t('exhibition')}</h4>
-                <div className="space-y-2 text-sm text-gray-600">
-                  <p>{t('exhibitionDate')}</p>
-                  <p>Villa Doria D'Angri</p>
-                  <p>{t('naples')}, {t('italy')}</p>
-                </div>
-              </div>
               <div>
                 <h4 className="text-sm font-medium mb-4">{t('contact')}</h4>
                 <div className="space-y-2 text-sm text-gray-600">
@@ -304,8 +266,8 @@ export default function HomePage() {
                     <a href="mailto:visions@napuleth.org">visions@napuleth.org</a>
                   </div>
                   <div className="flex flex-row items-center gap-2">
-                    <Phone className="w-4 h-4" />
-                    <a href="tel:+390811234567">+39 081 123 4567</a>
+                    <FaTelegramPlane className="w-4 h-4" />
+                    <a href="https://t.me/+yAnPodng62NhMGNk">napulethvisions</a>
                   </div>
                   <div className="flex flex-row items-center gap-2">
                     <Instagram className="w-4 h-4" />

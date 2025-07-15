@@ -50,7 +50,7 @@ export const artists: Artist[] = [
       description:
         "Exploring the intersection of traditional Neapolitan art and blockchain technology through immersive digital experiences.",
       image: a1.src,
-      works: 1,
+      works: 8,
       detailedWorks:[
         {
           id: 1,
@@ -122,7 +122,7 @@ export const artists: Artist[] = [
       title: "Decentralized Dreams",
       description: "Abstract compositions inspired by blockchain architecture and decentralized network structures.",
       image: a4.src,
-      works: 2,
+      works: 3,
       detailedWorks:[
         {
           id: 1,

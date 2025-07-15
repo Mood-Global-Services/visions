@@ -42,9 +42,6 @@ export default function Newsletter() {
   return (
     <div className="max-w-2xl">
       <h2 className="text-2xl font-light mb-4">{t('stayConnected')}</h2>
-      <p className="text-gray-600 mb-8 leading-relaxed">
-        {t('stayConnectedDescription')}
-      </p>
 
       <form onSubmit={handleSubmit} className="flex gap-4">
         <div className="flex-1">
