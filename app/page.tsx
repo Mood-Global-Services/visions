@@ -39,9 +39,6 @@ export default function HomePage() {
                   <Link href="/" className="text-md text-gray-900 hover:text-gray-600">
                     {t('home')}
                   </Link>
-                  <Link href="/about" className="text-md text-gray-500 hover:text-gray-600">
-                    {t('about')}
-                  </Link>
                   <Link href="/artists" className="text-md text-gray-500 hover:text-gray-900">
                     {t('artists')}
                   </Link>

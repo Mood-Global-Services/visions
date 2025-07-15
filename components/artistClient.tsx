@@ -12,6 +12,7 @@ import LanguageSwitcher from '@/components/ui/languageSwitcher'
 import Newsletter from '@/components/newsletter'
 import { ArrowUpRight } from 'lucide-react'
 import { Mail, Phone, Instagram, Menu } from 'lucide-react'
+import { FaTelegramPlane } from "react-icons/fa";
 import { useState } from 'react'
 import MobileMenu from '@/components/mobileMenu'
 import { useNftAvailability } from '@/hooks/useNftAvailability'
@@ -39,13 +40,10 @@ export default function ArtistClient({ artist }: ArtistClientProps) {
                             </Link>
                             <div className="flex items-center justify-end space-x-6">
                                 <nav className="hidden md:flex space-x-8">
-                                    <Link href="/" className="text-md text-gray-900 hover:text-gray-600">
+                                    <Link href="/" className="text-md text-gray-500 hover:text-gray-600">
                                         {t('home')}
                                     </Link>
-                                    <Link href="/about" className="text-md text-gray-500 hover:text-gray-600">
-                                        {t('about')}
-                                    </Link>
-                                    <Link href="/artists" className="text-md text-gray-500 hover:text-gray-900">
+                                    <Link href="/artists" className="text-md text-gray-900 hover:text-gray-900">
                                         {t('artists')}
                                     </Link>
                                     <Link href="/exhibition" className="text-md text-gray-500 hover:text-gray-900">
@@ -69,16 +67,15 @@ export default function ArtistClient({ artist }: ArtistClientProps) {
                 <section className="max-w-7xl mx-auto px-6 py-16">
                     <div className="max-w-4xl">
                         <h1 className="text-4xl md:text-5xl font-light mb-4">{artist.name}</h1>
-                        <h2 className="text-2xl text-gray-600 mb-12">{artist.title}</h2>
 
                         <div className="grid md:grid-cols-2 gap-12 mb-16">
                             <div>
                                 <h3 className="text-sm font-medium mb-4 uppercase tracking-wide">{t('biography')}</h3>
-                                <p className="text-gray-600 leading-relaxed">{artist.bio}</p>
+                                <p className="text-gray-600 leading-relaxed">{i18n.language == "en" ? artist.bio : artist.bioIT}</p>
                             </div>
                             <div>
                                 <h3 className="text-sm font-medium mb-4 uppercase tracking-wide">{t('artistStatement')}</h3>
-                                <p className="text-gray-600 leading-relaxed">{artist.statement}</p>
+                                <p className="text-gray-600 leading-relaxed">{i18n.language == "en" ? artist.statement : artist.statementIT}</p>
                             </div>
                         </div>
                     </div>
@@ -104,28 +101,6 @@ export default function ArtistClient({ artist }: ArtistClientProps) {
                 <footer className="border-t border-gray-100">
                     <div className="max-w-7xl mx-auto px-6 py-12">
                         <div className="grid md:grid-cols-4 gap-8">
-                            <div className="md:col-span-2">
-                                <h3 className="text-lg font-light mb-4">NapulETH Visions</h3>
-                                <p className="text-sm text-gray-600 mb-4 max-w-md">
-                                    {t('footerText')}
-                                </p>
-                                <div className="flex space-x-4 text-base hover:text-gray-900 transition-colors">
-                                    <a href="https://maps.app.goo.gl/pU2PBu4QamVACR2p8" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900 transition-colors">
-                                        <div className="flex flex-row items-center gap-1">
-                                            {t('findUs')}
-                                            <ArrowUpRight className="w-4 h-4" />
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div>
-                                <h4 className="text-sm font-medium mb-4">{t('exhibition')}</h4>
-                                <div className="space-y-2 text-sm text-gray-600">
-                                    <p>{t('exhibitionDate')}</p>
-                                    <p>Villa Doria D'Angri</p>
-                                    <p>{t('naples')}, {t('italy')}</p>
-                                </div>
-                            </div>
                             <div>
                                 <h4 className="text-sm font-medium mb-4">{t('contact')}</h4>
                                 <div className="space-y-2 text-sm text-gray-600">
@@ -134,8 +109,8 @@ export default function ArtistClient({ artist }: ArtistClientProps) {
                                         <a href="mailto:visions@napuleth.org">visions@napuleth.org</a>
                                     </div>
                                     <div className="flex flex-row items-center gap-2">
-                                        <Phone className="w-4 h-4" />
-                                        <a href="tel:+390811234567">+39 081 123 4567</a>
+                                        <FaTelegramPlane className="w-4 h-4" />
+                                        <a href="https://t.me/+yAnPodng62NhMGNk">napulethvisions</a>
                                     </div>
                                     <div className="flex flex-row items-center gap-2">
                                         <Instagram className="w-4 h-4" />

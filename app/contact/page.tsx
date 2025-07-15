@@ -10,6 +10,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { ArrowLeft, Mail, Phone, MapPin, Clock, Instagram, Menu } from "lucide-react"
+import { FaTelegramPlane } from "react-icons/fa";
 import { useTranslation } from 'react-i18next'
 import Image from "next/image"
 import logo from '@/assets/images/logo.webp'
@@ -56,11 +57,8 @@ export default function ContactPage() {
               </Link>
               <div className="flex items-center justify-end space-x-6">
                 <nav className="hidden md:flex space-x-8">
-                  <Link href="/" className="text-md text-gray-900 hover:text-gray-600">
+                  <Link href="/" className="text-md text-gray-500 hover:text-gray-600">
                     {t('home')}
-                  </Link>
-                  <Link href="/about" className="text-md text-gray-500 hover:text-gray-600">
-                    {t('about')}
                   </Link>
                   <Link href="/artists" className="text-md text-gray-500 hover:text-gray-900">
                     {t('artists')}
@@ -68,7 +66,7 @@ export default function ContactPage() {
                   <Link href="/exhibition" className="text-md text-gray-500 hover:text-gray-900">
                     {t('exhibition')}
                   </Link>
-                  <Link href="/contact" className="text-md text-gray-500 hover:text-gray-900">
+                  <Link href="/contact" className="text-md text-gray-900 hover:text-gray-900">
                     {t('contact')}
                   </Link>
                 </nav>
@@ -207,18 +205,6 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <MapPin className="w-5 h-5 text-gray-400 mt-1" />
-                  <div>
-                    <h3 className="font-medium mb-1">{t('exhibitionVenue')}</h3>
-                    <div className="text-sm text-gray-600">
-                      <a href="https://maps.app.goo.gl/pU2PBu4QamVACR2p8" target="_blank" rel="noopener noreferrer">
-                        <p>{t('exhibitionDate')}<br />Villa Doria D'Angri<br />{t('naples')}, {t('italy')}</p>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
                   <Clock className="w-5 h-5 text-gray-400 mt-1" />
                   <div>
                     <h3 className="font-medium mb-1">{t('exhibitionHours')}</h3>
@@ -233,9 +219,19 @@ export default function ContactPage() {
                 <div className="flex items-start space-x-4">
                   <Instagram className="w-5 h-5 text-gray-400 mt-1" />
                   <div>
-                    <h3 className="font-medium mb-1">{t('followUs')}</h3>
+                    <h3 className="font-medium mb-1">Intagram</h3>
                     <div className="text-sm text-gray-600">
                       <a href="https://www.instagram.com/napuleth.visions/#" target="_blank" rel="noopener noreferrer">napulethvisions</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <FaTelegramPlane className="w-5 h-5 text-gray-400 mt-1" />
+                  <div>
+                    <h3 className="font-medium mb-1">Telegram</h3>
+                    <div className="text-sm text-gray-600">
+                      <a href="https://t.me/+yAnPodng62NhMGNk" target="_blank" rel="noopener noreferrer">napulethvisions</a>
                     </div>
                   </div>
                 </div>

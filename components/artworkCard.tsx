@@ -32,24 +32,17 @@ const ArtworkCard = ({ work }: ArtworkCardProps) => {
                 <div>
                     <h3 className="text-2xl font-light mb-2">{work.title}</h3>
                     <p className="text-sm text-gray-500 mb-4">
-                        {work.medium} • {work.dimensions} • {work.year}
+                    {i18n.language == "en" ? work.description : work.descriptionIT}
                     </p>
                     {
                         work.technique && (
                             <p className="text-sm text-gray-500 mb-4">
-                                {t('technique')}: {work.technique}
+                                {work.technique}
                             </p>
                         )
                     }
-                    {
-                        work.provenance && (
-                            <p className="text-sm text-gray-500 mb-4">
-                                {t('provenance')}: {work.provenance}
-                            </p>
-                        )
-                    }
-                    <div className="flex items-center space-x-4 mb-6">
-                        <span className="text-lg font-medium">{work.price}</span>
+                    <div className="flex items-center space-x-2 mb-6">
+                        <span className="text-lg font-medium">{work.price} ETH</span>
                         <span className="text-gray-500">({work.fiatPrice})</span>
                     </div>
                 </div>

@@ -10,6 +10,7 @@ import AssociazioneCivita from '@/assets/images/sponsors/civita.png'
 import CommuneDiNapoli    from '@/assets/images/sponsors/commune.webp'
 import FondazioneMorraGreco from '@/assets/images/sponsors/FMG_Logo.webp'
 import Familiae           from '@/assets/images/sponsors/FAMILIAE.webp'
+import FRG from "@/assets/images/sponsors/FRG.webp"
 
 export default function Sponsors() {
   const sponsors = [
@@ -42,6 +43,12 @@ export default function Sponsors() {
       src: Familiae,
       alt: 'Familiae',
       imgClasses: 'h-52 mx-6'
+    },
+    {
+      href: 'https://www.familiae.it/',
+      src: FRG,
+      alt: 'Familiae',
+      imgClasses: 'h-64 mx-4 brightness-0'
     },
   ]
 

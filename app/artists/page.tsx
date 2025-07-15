@@ -3,7 +3,9 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { ArrowLeft, ArrowRight, Mail, Phone, Instagram, ArrowUpRight, Menu } from "lucide-react"
+import { ArrowLeft, ArrowRight, Mail, Instagram, Menu } from "lucide-react"
+import { FaTelegramPlane } from "react-icons/fa";
+
 import Image from "next/image"
 import logo from '@/assets/images/logo.webp'
 import { useTranslation } from 'react-i18next'
@@ -30,13 +32,10 @@ export default function ArtistsPage() {
               </Link>
               <div className="flex items-center justify-end space-x-6">
                 <nav className="hidden md:flex space-x-8">
-                  <Link href="/" className="text-md text-gray-900 hover:text-gray-600">
+                  <Link href="/" className="text-md text-gray-500 hover:text-gray-600">
                     {t('home')}
                   </Link>
-                  <Link href="/about" className="text-md text-gray-500 hover:text-gray-600">
-                    {t('about')}
-                  </Link>
-                  <Link href="/artists" className="text-md text-gray-500 hover:text-gray-900">
+                  <Link href="/artists" className="text-md text-gray-900 hover:text-gray-900">
                     {t('artists')}
                   </Link>
                   <Link href="/exhibition" className="text-md text-gray-500 hover:text-gray-900">
@@ -67,10 +66,7 @@ export default function ArtistsPage() {
         {/* Page Header */}
         <section className="max-w-7xl mx-auto px-6 pb-16">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-light mb-6">{t('featuredArtists')}</h1>
-            <p className="text-lg text-gray-600 leading-relaxed">
-              {t('featuredArtistsDescription')}
-            </p>
+            <h1 className="text-4xl md:text-5xl font-light mb-6">{t('artists')}</h1>
           </div>
         </section>
 
@@ -97,13 +93,8 @@ export default function ArtistsPage() {
                 <div className={`mb-20 space-y-6 ${index % 2 === 1 ? "lg:col-start-1 lg:row-start-1" : ""}`}>
                   <div>
                     <h2 className="text-3xl font-light mb-2">{artist.name}</h2>
-                    <h3 className="text-xl text-gray-600 mb-4">{artist.title}</h3>
-                    <p className="text-gray-600 leading-relaxed mb-4">{artist.description}</p>
-                    <p className="text-sm text-gray-500 mb-6">{artist.bio}</p>
                     <div className="flex items-center space-x-4 text-sm text-gray-500">
-                      <span>{artist.works} artworks</span>
-                      <div className="w-1 h-1 bg-gray-300 rounded-full" />
-                      <span>Available for purchase</span>
+                      <span>{artist.works} {t('artworks')}</span>
                     </div>
                   </div>
 
@@ -112,7 +103,7 @@ export default function ArtistsPage() {
                       window.location.href = `/artist/${artist.id}`
                     }}
                   >
-                    {t('viewArtist')}
+                    {t('viewArtworks')}
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </div>
@@ -131,28 +122,6 @@ export default function ArtistsPage() {
         <footer className="border-t border-gray-100">
           <div className="max-w-7xl mx-auto px-6 py-12">
             <div className="grid md:grid-cols-4 gap-8">
-              <div className="md:col-span-2">
-                <h3 className="text-lg font-light mb-4">NapulETH Visions</h3>
-                <p className="text-sm text-gray-600 mb-4 max-w-md">
-                  {t('footerText')}
-                </p>
-                <div className="flex space-x-4 text-base hover:text-gray-900 transition-colors">
-                  <a href="https://maps.app.goo.gl/pU2PBu4QamVACR2p8" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900 transition-colors">
-                    <div className="flex flex-row items-center gap-1">
-                      {t('findUs')}
-                      <ArrowUpRight className="w-4 h-4" />
-                    </div>
-                  </a>
-                </div>
-              </div>
-              <div>
-                <h4 className="text-sm font-medium mb-4">{t('exhibition')}</h4>
-                <div className="space-y-2 text-sm text-gray-600">
-                  <p>{t('exhibitionDate')}</p>
-                  <p>Villa Doria D'Angri</p>
-                  <p>{t('naples')}, {t('italy')}</p>
-                </div>
-              </div>
               <div>
                 <h4 className="text-sm font-medium mb-4">{t('contact')}</h4>
                 <div className="space-y-2 text-sm text-gray-600">
@@ -161,8 +130,8 @@ export default function ArtistsPage() {
                     <a href="mailto:visions@napuleth.org">visions@napuleth.org</a>
                   </div>
                   <div className="flex flex-row items-center gap-2">
-                    <Phone className="w-4 h-4" />
-                    <a href="tel:+390811234567">+39 081 123 4567</a>
+                    <FaTelegramPlane className="w-4 h-4" />
+                    <a href="https://t.me/+yAnPodng62NhMGNk">napulethvisions</a>
                   </div>
                   <div className="flex flex-row items-center gap-2">
                     <Instagram className="w-4 h-4" />
