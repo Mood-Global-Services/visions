@@ -173,8 +173,8 @@ export const artists: Artist[] = [
         {
           id: 1,
           title: "Dream Of A Synthetic Body#3",
-          description: "Whole core 150cm x 150cm x 110cm; total weight approximately 20kg",
-          descriptionIT: "Nucleo intero 150cm x 150cm x 110cm; peso totale circa 20kg",
+          description: "Iron, plastic, bone, lace, aluminum, steel, flowers, water-based enamel, plants, 150 x 180 x 150 cm, 2022",
+          descriptionIT: "Ferro, plastica, osso, pizzo, alluminio, acciaio, fiori, smalto a base d'acqua, piante, 150 x 180 x 150 cm, 2022",
           medium: "Digital Art, NFT",
           dimensions: "150x150x150 cm",
           year: "2024",
