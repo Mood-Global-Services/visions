@@ -268,7 +268,7 @@ export const artists: Artist[] = [
           technique: "Vomito (Vomito) is a series of sculptures of an indigestible nature, the result of widespread malaise in sculptural form. Exhausted by the frustration, anxiety, and performative discomfort that lurk in the cultural landscape, all that remains is to vomit. In this most extreme manifestation of the body, the artist seeks to exaggerate and make visible what cannot be said out loud, but is deeply felt.",
           techniqueIT: "Vomito è una serie di sculture di natura indigesta, frutto di malessere generalizzato in aspetto scultoreo. Esausto dalle situazioni di frustrazione, ansia e disagio performativo che si annidano nel panorama culturale, non resta che vomitare. In questa manifestazione del corpo più estrema, si cerca di esasperare e rendere visibile quello che non si può dire ad alta voce, ma che in fondo si pensa.",
           provenance: "Studio Lorenzo Lunghi, Milano, Italia",
-          tokenId: 9,
+          tokenId: 4,
         },
         {
           id: 3,
