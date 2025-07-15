@@ -110,6 +110,7 @@ export default function ArtistsPage() {
                 <div className={`mb-20 space-y-6 ${index % 2 === 1 ? "lg:col-start-1 lg:row-start-1" : ""}`}>
                   <div>
                     <h2 className="text-3xl font-light mb-2">{artist.name}</h2>
+                    <h5 className="text-xl font-light mb-2">{i18n.language == "en" ? artist.shortDescription : artist.shortDescriptionIT}</h5>
                     <div className="flex items-center space-x-4 text-sm text-gray-500">
                       <span>{artist.works} {t('artworks')}</span>
                     </div>

@@ -24,6 +24,8 @@ export interface Artist {
     title: string
     description: string
     descriptionIT?: string;
+    shortDescription?: string;
+    shortDescriptionIT?: string;
     image: string
     works: number
     detailedWorks: DetailedWork[]
@@ -57,6 +59,8 @@ export const artists: Artist[] = [
       title: "Digital Metamorphosis",
       description:
         "Exploring the intersection of traditional Neapolitan art and blockchain technology through immersive digital experiences.",
+      shortDescription: "His practice combines AI, sound design, and primordial signs in immersive environments where meaning and perception emerge from context, activating experiences that question identity and artifice.",
+      shortDescriptionIT: "La sua pratica combina AI, sound design e segni primordiali in ambienti immersivi dove significato e percezione emergono dal contesto, attivando esperienze che interrogano identità e artificio.",
       image: a1.src,
       works: 8,
       detailedWorks:[
@@ -161,6 +165,8 @@ export const artists: Artist[] = [
       name: "Clarissa Falco",
       title: "Crypto Vesuvius",
       description: "Volcanic landscapes reimagined through generative algorithms and smart contract interactions.",
+      shortDescription: "Her practice, which spans visual and performing arts, investigates the body as a mechanical device: identity dissolves into repetitive gestures, transforming into a cog in a system.",
+      shortDescriptionIT: "La sua pratica, tra arti visive e performative, indaga il corpo come dispositivo meccanico: l’identità si dissolve in gesti ripetitivi, trasformandosi in ingranaggio di un sistema.",
       image: a2.src,
       works: 1,
       detailedWorks:[
@@ -192,6 +198,8 @@ export const artists: Artist[] = [
       name: "Emilio Vavarella",
       title: "Mediterranean Tokens",
       description: "NFT interpretations of classical Mediterranean motifs with contemporary blockchain aesthetics.",
+      shortDescription: "Vavarella combines interdisciplinary research and media experimentation, exploring the relationships between technology, the body, and cognitive experience.",
+      shortDescriptionIT: "Vavarella coniuga ricerca interdisciplinare e sperimentazione mediale, esplorando le relazioni tra tecnologia, corpo ed esperienza cognitiva.",
       image: a3.src,
       works: 1,
       detailedWorks:[
@@ -221,6 +229,8 @@ export const artists: Artist[] = [
       name: "Lorenzo Lunghi",
       title: "Decentralized Dreams",
       description: "Abstract compositions inspired by blockchain architecture and decentralized network structures.",
+      shortDescription: "His practice, intertwined with technology and the human psyche, explores the latent threats of a surveilled present. Sculptures and performative actions operate as hybrid devices that destabilize the perception of the self, embodying parasitic entities in a disintegrated and hallucinatory reality.",
+      shortDescriptionIT: "La sua pratica, tra tecnologia e psiche umana, indaga le minacce latenti di un presente sorvegliato. Sculture e azioni performative operano come dispositivi ibridi che destabilizzano la percezione del sé, incarnando entità parassite in un reale disgregato e allucinato.",
       image: a4.src,
       works: 3,
       detailedWorks:[
