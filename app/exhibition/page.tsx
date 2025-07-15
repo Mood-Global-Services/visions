@@ -96,9 +96,6 @@ export default function ExhibitionPage() {
                         <div className="lg:col-span-2 space-y-12">
                             {/* Exhibition Overview */}
                             <div>
-                                <h2 className="text-2xl font-light mb-6">
-                                    {t('exhibitionOverview')}
-                                </h2>
                                 <div className="space-y-6 text-gray-600 leading-relaxed">
                                     <p>
                                         {t('exhibitionOverviewDescription')}

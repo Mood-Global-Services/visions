@@ -16,7 +16,7 @@ import LanguageSwitcher from "@/components/ui/languageSwitcher"
 import i18n from "@/i18n/client"
 import { artists } from "@/data/artists"
 import windows from "@/assets/images/4.webp"
-import image2 from "@/assets/images/2.webp"
+import image2 from "@/assets/images/windows.webp"
 import Sponsors from "@/components/sponsors"
 import MobileMenu from "@/components/mobileMenu"
 
