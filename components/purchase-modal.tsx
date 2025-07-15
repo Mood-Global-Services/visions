@@ -23,16 +23,19 @@ import { DetailedWork } from '@/data/artists'
 
 interface PurchaseModalProps {
   work: DetailedWork
+  price: string
 }
 
 //–– Inner: must live inside providers so hook works ––
 function EmbeddedCheckoutInner({
   work,
+  price,
   shippingEmail,
   onComplete,
   onError,
 }: {
   work: DetailedWork
+  price: string
   shippingEmail: string
   onComplete: () => void
   onError: (err: Error) => void
@@ -66,7 +69,7 @@ function EmbeddedCheckoutInner({
         {
           tokenLocator: `base-sepolia:${process.env.NEXT_PUBLIC_SEPOLIA_CONTRACT_ADDRESS!}:${work.tokenId}`,
           callData: {
-            totalPrice: work.price,
+            totalPrice: price,
             quantity: 1,
           },
         },
@@ -83,11 +86,13 @@ function EmbeddedCheckoutInner({
 //–– Step 2 wrapper that provides context ––
 function EmbeddedCheckoutStep({
   work,
+  price,
   shippingEmail,
   onComplete,
   onError,
 }: {
   work: DetailedWork
+  price: string
   shippingEmail: string
   onComplete: () => void
   onError: (err: Error) => void
@@ -99,6 +104,7 @@ function EmbeddedCheckoutStep({
       <CrossmintCheckoutProvider>
         <EmbeddedCheckoutInner
           work={work}
+          price={price}
           shippingEmail={shippingEmail}
           onComplete={onComplete}
           onError={onError}
@@ -108,7 +114,7 @@ function EmbeddedCheckoutStep({
   )
 }
 
-export default function PurchaseModal({ work }: PurchaseModalProps) {
+export default function PurchaseModal({ work, price }: PurchaseModalProps) {
   const [step, setStep] = useState<1 | 2 | 3>(1)
   const [shipping, setShipping] = useState({
     email: '',
@@ -139,7 +145,7 @@ export default function PurchaseModal({ work }: PurchaseModalProps) {
           <>
             <h2 className="text-xl font-light">{work.title}</h2>
             <div className="flex flex-row items-center space-x-1 mb-6">
-              <h5 className="text-lg font-medium">{work.price}ETH</h5>
+              <h5 className="text-lg font-medium">{price}ETH</h5>
               <h6 className="text-gray-500">({work.fiatPrice})</h6>
             </div>
             <div className="space-y-4">
@@ -187,6 +193,7 @@ export default function PurchaseModal({ work }: PurchaseModalProps) {
             )}
             <EmbeddedCheckoutStep
               work={work}
+              price={price}
               shippingEmail={shipping.email}
               onComplete={() => setStep(3)}
               onError={(err) => setError(err.message)}

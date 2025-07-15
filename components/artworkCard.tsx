@@ -6,8 +6,9 @@ import { Artist, DetailedWork } from '@/data/artists'
 import PurchaseModal from "./purchase-modal"
 import { useTranslation } from 'react-i18next'
 import i18n from "@/i18n/client"
+import { useEthConversion } from '@/hooks/useEthConversion'
 
-interface ArtworkCardProps {    
+interface ArtworkCardProps {
     work: DetailedWork
 }
 
@@ -15,6 +16,11 @@ const ArtworkCard = ({ work }: ArtworkCardProps) => {
     const { available, loading } = useNftAvailability(work.tokenId as number)
     const [isOpen, setIsOpen] = useState(false)
     const { t } = useTranslation()
+
+    const { eurPerEth, loading: priceLoading } = useEthConversion()
+
+    const fiat = parseFloat(work.fiatPrice.replace('€', '').replace(',', '.')) // if fiatPrice is a string
+    const ethFromFiat = eurPerEth ? (fiat / eurPerEth).toFixed(4) : '0.00'
 
     return (
         <div key={work.id} className="grid md:grid-cols-2 gap-12 items-start">
@@ -32,7 +38,7 @@ const ArtworkCard = ({ work }: ArtworkCardProps) => {
                 <div>
                     <h3 className="text-2xl font-light mb-2">{work.title}</h3>
                     <p className="text-sm text-gray-500 mb-4">
-                    {i18n.language == "en" ? work.description : work.descriptionIT}
+                        {i18n.language == "en" ? work.description : work.descriptionIT}
                     </p>
                     {
                         work.technique && (
@@ -42,14 +48,14 @@ const ArtworkCard = ({ work }: ArtworkCardProps) => {
                         )
                     }
                     <div className="flex items-center space-x-2 mb-6">
-                        <span className="text-lg font-medium">{work.price} ETH</span>
+                        <span className="text-lg font-medium">{ethFromFiat} ETH</span>
                         <span className="text-gray-500">({work.fiatPrice})€</span>
                     </div>
                 </div>
 
 
                 {available ? (
-                    <PurchaseModal work={work} />
+                    <PurchaseModal work={work} price={ethFromFiat} />
                 ) : (
                     <Button disabled className="bg-gray-100 text-gray-400">{t('sold')}</Button>
                 )}
