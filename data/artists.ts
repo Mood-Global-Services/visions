@@ -206,8 +206,8 @@ export const artists: Artist[] = [
         {
           id: 1,
           title: "Animal Cinema",
-          description: "Video, edition 3 of 3, metal DVD case and artist's book",
-          descriptionIT: "Video, edizione 3 di 3, cofanetto DVD in metallo e il libro d’artista",
+          description: "HD video, 00:12:12, 16:9 aspect ratio, color, sound. Edition 3 of 3, metal DVD case and artist's book, 2017",
+          descriptionIT: "Video in HD, 00:12:12, formato 16:9, colori, suono. edizione 3 di 3, custodia in metallo per DVD e libro d'artista, 2017",
           medium: "Digital Art, NFT",
           dimensions: "3840 × 2160 px",
           year: "2024",
