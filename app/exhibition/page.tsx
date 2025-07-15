@@ -14,15 +14,29 @@ import image2 from '@/assets/images/2.webp'
 import placeholder from "@/assets/images/placeholder.webp"
 import Newsletter from "@/components/newsletter"
 import MobileMenu from "@/components/mobileMenu"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 
 export default function ExhibitionPage() {
     const { t } = useTranslation()
     const [isOpen, setIsOpen] = useState(false)
-    const { ready } = useTranslation()
+    const [isReady, setIsReady] = useState(false)
 
-    if (!ready) return null
+    useEffect(() => {
+        const lng = i18n.language
+        const rawNs = i18n.options.defaultNS ?? 'translation'
+        const ns = Array.isArray(rawNs) ? rawNs[0] : rawNs
+
+        if (i18n.isInitialized && i18n.hasResourceBundle(lng, ns)) {
+            setIsReady(true)
+        } else {
+            i18n.loadNamespaces(ns, () => {
+                setIsReady(true)
+            })
+        }
+    }, [i18n])
+
+    if (!isReady) return null
 
     return (
         <>

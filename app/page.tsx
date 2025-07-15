@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -23,9 +23,23 @@ import MobileMenu from "@/components/mobileMenu"
 export default function HomePage() {
   const { t } = useTranslation()
   const [isOpen, setIsOpen] = useState(false)
-  const { ready } = useTranslation()
+  const [isReady, setIsReady] = useState(false)
 
-  if (!ready) return null
+  useEffect(() => {
+    const lng = i18n.language
+    const rawNs = i18n.options.defaultNS ?? 'translation'
+    const ns = Array.isArray(rawNs) ? rawNs[0] : rawNs
+
+    if (i18n.isInitialized && i18n.hasResourceBundle(lng, ns)) {
+      setIsReady(true)
+    } else {
+      i18n.loadNamespaces(ns, () => {
+        setIsReady(true)
+      })
+    }
+  }, [i18n])
+
+  if (!isReady) return null
 
   return (
     <>

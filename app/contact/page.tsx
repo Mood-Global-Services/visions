@@ -2,7 +2,7 @@
 
 import type React from "react"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -43,9 +43,23 @@ export default function ContactPage() {
     }))
   }
 
-  const { ready } = useTranslation()
+  const [isReady, setIsReady] = useState(false)
 
-if (!ready) return null
+  useEffect(() => {
+    const lng = i18n.language
+    const rawNs = i18n.options.defaultNS ?? 'translation'
+    const ns = Array.isArray(rawNs) ? rawNs[0] : rawNs
+
+    if (i18n.isInitialized && i18n.hasResourceBundle(lng, ns)) {
+      setIsReady(true)
+    } else {
+      i18n.loadNamespaces(ns, () => {
+        setIsReady(true)
+      })
+    }
+  }, [i18n])
+
+  if (!isReady) return null
 
 
   return (

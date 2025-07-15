@@ -1,5 +1,6 @@
 'use client'
 
+import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Artist, DetailedWork } from '@/data/artists'
 import PurchaseModal from '@/components/purchase-modal-fallback'
@@ -13,7 +14,6 @@ import Newsletter from '@/components/newsletter'
 import { ArrowUpRight } from 'lucide-react'
 import { Mail, Phone, Instagram, Menu } from 'lucide-react'
 import { FaTelegramPlane } from "react-icons/fa";
-import { useState } from 'react'
 import MobileMenu from '@/components/mobileMenu'
 import { useNftAvailability } from '@/hooks/useNftAvailability'
 import ArtworkCard from '@/components/artworkCard'
@@ -26,9 +26,23 @@ export default function ArtistClient({ artist }: ArtistClientProps) {
     const { t, i18n } = useTranslation()
     const [isOpen, setIsOpen] = useState(false)
 
-    const { ready } = useTranslation()
+    const [isReady, setIsReady] = useState(false)
 
-    if (!ready) return null
+    useEffect(() => {
+        const lng = i18n.language
+        const rawNs = i18n.options.defaultNS ?? 'translation'
+        const ns = Array.isArray(rawNs) ? rawNs[0] : rawNs
+
+        if (i18n.isInitialized && i18n.hasResourceBundle(lng, ns)) {
+            setIsReady(true)
+        } else {
+            i18n.loadNamespaces(ns, () => {
+                setIsReady(true)
+            })
+        }
+    }, [i18n])
+
+    if (!isReady) return null
 
     return (
         <>
