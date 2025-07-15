@@ -43,7 +43,10 @@ export default function ContactPage() {
     }))
   }
 
-  if (!i18n || !i18n.isInitialized) return null
+  const { ready } = useTranslation()
+
+if (!ready) return null
+
 
   return (
     <>

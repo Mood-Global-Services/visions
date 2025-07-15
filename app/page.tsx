@@ -23,7 +23,10 @@ import MobileMenu from "@/components/mobileMenu"
 export default function HomePage() {
   const { t } = useTranslation()
   const [isOpen, setIsOpen] = useState(false)
-  if (!i18n || !i18n.isInitialized) return null
+  const { ready } = useTranslation()
+
+  if (!ready) return null
+
   return (
     <>
       <div className="min-h-screen bg-white">
