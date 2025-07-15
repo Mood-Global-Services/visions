@@ -26,7 +26,9 @@ export default function ArtistClient({ artist }: ArtistClientProps) {
     const { t, i18n } = useTranslation()
     const [isOpen, setIsOpen] = useState(false)
 
-    if (!i18n?.isInitialized) return null
+    const { ready } = useTranslation()
+
+    if (!ready) return null
 
     return (
         <>
