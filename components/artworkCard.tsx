@@ -43,7 +43,7 @@ const ArtworkCard = ({ work }: ArtworkCardProps) => {
                     {
                         work.technique && (
                             <p className="text-sm text-gray-500 mb-4">
-                                {work.technique}
+                                {i18n.language == "en" ? work.technique : work.techniqueIT}
                             </p>
                         )
                     }

@@ -236,7 +236,7 @@ export const artists: Artist[] = [
       detailedWorks:[
         {
           id: 1,
-          title: "Spie (Fontana V.2)",
+          title: "Spie (Fontana V.3)",
           description: "Borosilicate glass, oxygen, aluminum, plexiglass, servomotors, Raspberry Pi, Raspberry Pi module, Black camera, LED light, 40x15x10 cm, 2025",
           descriptionIT: "Vetro Borosilicato, Ossigeno, Alluminio, Plexiglass, Servomotori, Raspberry Pi, Raspberry Modulo, Telecamera 3 Noir, Luce a leD, 40x15x10 cm, 2025",
           medium: "Digital Art, NFT",
