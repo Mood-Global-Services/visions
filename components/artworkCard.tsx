@@ -43,7 +43,7 @@ const ArtworkCard = ({ work }: ArtworkCardProps) => {
                     }
                     <div className="flex items-center space-x-2 mb-6">
                         <span className="text-lg font-medium">{work.price} ETH</span>
-                        <span className="text-gray-500">({work.fiatPrice})</span>
+                        <span className="text-gray-500">({work.fiatPrice})€</span>
                     </div>
                 </div>
 
