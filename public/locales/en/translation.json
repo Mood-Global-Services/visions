@@ -115,5 +115,12 @@
   "installationView": "Installation View",
   "ShowInfo": "Show Info",
   "artistStatement": "Artist Statment",
-  "biography": "Biography"
+  "biography": "Biography",
+  "colophon": "Colophon Impressum NapulETH Visions",
+  "worksBy": "Works by",
+  "curatedBy": "Curated by",
+  "texts": "Texts",
+  "translations": "Translations",
+  "thanksTo": "Thanks to",
+  "photoCredits": "Photo credits"
 }

@@ -121,5 +121,12 @@
   "installationView": "Installation View",
   "ShowInfo": "Informazioni sullo spettacolo",
   "artistStatement": "Artist Statment",
-  "biography": "Biografia"
+  "biography": "Biografia",
+  "colophon": "Colophon Impressum NapulETH Visions",
+  "worksBy": "Opere di",
+  "curatedBy": "A cura di",
+  "texts": "Testi",
+  "translations": "Traduzioni",
+  "thanksTo": "Si ringrazia",
+  "photoCredits": "Crediti foto"
 }
