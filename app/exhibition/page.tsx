@@ -125,7 +125,7 @@ export default function ExhibitionPage() {
                                         {t('colophon')}
                                     </p>
                                     <p>
-                                        {t('worksBy')}: Clarissa Falco Lorenzo Lunghi Adriano Tenore Emilio Vavarella 
+                                        {t('worksBy')}: Clarissa Falco, Lorenzo Lunghi, Adriano Tenore, Emilio Vavarella 
                                     </p>
                                     <p>
                                         {t('curatedBy')}: Alessio Esposito
@@ -134,13 +134,13 @@ export default function ExhibitionPage() {
                                         Project Manager: Fabiola Cangiano 
                                     </p>
                                     <p>
-                                        {t('texts')}: Francesca Blandino Alessio Esposito Franco Speroni Stefano Taccone 
+                                        {t('texts')}: Francesca Blandino, Alessio Esposito, Franco Speroni, Stefano Taccone 
                                     </p>
                                     <p>
                                         {t('translations')}: Giuseppe Giuliano 
                                     </p>
                                     <p>
-                                        {t('thanksTo')}: Francesca Blandino Alessandra Troncone 
+                                        {t('thanksTo')}: Francesca Blandino, Alessandra Troncone 
                                     </p>
                                     <p>
                                         {t('photoCredits')}: Danilo Donzelli 
