@@ -90,7 +90,7 @@ export default function ArtistsPage() {
         {/* Artists Grid */}
         <section className="max-w-7xl mx-auto px-6 pb-20">
           <div className="space-y-20">
-            {artists.map((artist, index) => (
+            {artists.sort((a, b) => a.name.split(" ")[1].localeCompare(b.name.split(" ")[1])).map((artist, index) => (
               <div
                 key={artist.id}
                 className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? "lg:grid-flow-col-dense" : ""}`}
@@ -101,7 +101,7 @@ export default function ArtistsPage() {
                       <img
                         src={artist.image || "/placeholder.svg"}
                         alt={artist.name}
-                        className="w-full h-[500px] object-cover"
+                        className="w-full h-[500px] object-cover grayscale"
                       />
                     </CardContent>
                   </Card>

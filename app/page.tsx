@@ -148,6 +148,7 @@ export default function HomePage() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {artists
+                .sort((a, b) => a.name.split(" ")[1].localeCompare(b.name.split(" ")[1]))
                 .map((artist) => (
                   <Link key={artist.id} href={`/artist/${artist.id}`} className="group">
                     <Card className="border-0 shadow-sm hover:shadow-lg transition-shadow duration-300">
@@ -156,7 +157,7 @@ export default function HomePage() {
                           <img
                             src={artist.image || "/placeholder.svg"}
                             alt={artist.title}
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 grayscale"
                           />
                         </div>
                         <div className="p-6">
@@ -264,7 +265,7 @@ export default function HomePage() {
 
         {/* Newsletter Section */}
         <section className="border-t border-gray-100 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-6 py-16">
+          <div className="max-w-7xl mx-auto px-6 py-8">
             <Newsletter />
           </div>
         </section>

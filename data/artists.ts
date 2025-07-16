@@ -67,8 +67,8 @@ export const artists: Artist[] = [
         {
           id: 1,
           title: "Bestiario Sintetico",
-          description: "The Synthetic Bestiary brings together a selection of surreal underwater creatures, born from an evolutionary process contaminated by human environmental impact. In this scenario, the introduction of artificial elements forces marine organisms to integrate foreign materials into new forms of biological adaptation. The result is an ecosystem of hybrid creatures, disturbing yet plausible, blending nature and artifice in a precarious and fascinating balance.",
-          descriptionIT: "Il Bestiario Sintetico raccoglie una selezione di creature sottomarine surreali, nate da un processo evolutivo contaminato dall’impatto ambientale dell’uomo. In questo scenario, l’introduzione di elementi artificiali costringe gli organismi marini ad integrare materiali estranei in nuove forme di adattamento biologico. Il risultato è un ecosistema di creature ibride, inquietanti eppure plausibili, che fondono natura e artificio in un equilibrio precario e affascinante.",
+          technique: "The Synthetic Bestiary brings together a selection of surreal underwater creatures, born from an evolutionary process contaminated by human environmental impact. In this scenario, the introduction of artificial elements forces marine organisms to integrate foreign materials into new forms of biological adaptation. The result is an ecosystem of hybrid creatures, disturbing yet plausible, blending nature and artifice in a precarious and fascinating balance.",
+          techniqueIT: "Il Bestiario Sintetico raccoglie una selezione di creature sottomarine surreali, nate da un processo evolutivo contaminato dall’impatto ambientale dell’uomo. In questo scenario, l’introduzione di elementi artificiali costringe gli organismi marini ad integrare materiali estranei in nuove forme di adattamento biologico. Il risultato è un ecosistema di creature ibride, inquietanti eppure plausibili, che fondono natura e artificio in un equilibrio precario e affascinante.",
           medium: "Digital Art, NFT",
           dimensions: "3840 × 2160 px",
           year: "2024",
@@ -76,6 +76,8 @@ export const artists: Artist[] = [
           fiatPrice: "900",
           image: w1.src,
           available: true,
+          description: "Video, colore, 20'’ cad., loop, 2025 (in progress)",
+          descriptionIT: "Video, colore, 20'’ cad., loop, 2025 (in progress)",
           tokenId: 29338
         },
         {
