@@ -8,6 +8,8 @@ import { Card, CardContent } from "@/components/ui/card"
 import Newsletter from "@/components/newsletter"
 import { ArrowRight, Calendar, Instagram, ArrowUpRight, Mail, Phone, Menu } from "lucide-react"
 import { FaTelegramPlane } from "react-icons/fa";
+import usdc from "@/assets/images/usdc.png"
+import dai from "@/assets/images/dai.png"
 
 import Image from "next/image"
 import logo from '@/assets/images/logo.webp'
@@ -141,7 +143,7 @@ export default function HomePage() {
         <section className="bg-gray-50">
           <div className="max-w-7xl mx-auto px-6 py-20">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-light mb-4">{t('featuredArtists')}</h2>
+              <h2 className="text-3xl md:text-4xl font-light mb-4">{t('artists')}</h2>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -208,7 +210,7 @@ export default function HomePage() {
                   </div>
                   <div className="flex justify-between">
                     <span className="text-gray-500">{t('artists')}</span>
-                    <span>4 {t('featured')}</span>
+                    <span>4</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-gray-500">{t('artworks')}</span>
@@ -222,10 +224,9 @@ export default function HomePage() {
                   <h3 className="text-lg font-medium mb-4">{t('purchaseOptions')}</h3>
                   <div className="space-y-2 text-sm text-gray-600">
                     <div className="flex flex-row items-center gap-1">
-                      <p>• Crypto (ETH, BTC)</p>
-                      <Image src="https://cdn3.emoji.gg/emojis/70506-bitcoin.png" alt="bitcoin" width={20} height={20} />
-                      <Image src="https://cdn3.emoji.gg/emojis/5819-eth.png" alt="ethereum" width={20} height={20} />
-                      <Image src="https://cdn3.emoji.gg/emojis/6121-tether.png" alt="tether" width={20} height={20} />
+                      <p>• Stablecoins (USDC, DAI)</p>
+                      <Image src={usdc.src} alt="usdc" width={20} height={20} />
+                      <Image src={dai.src} alt="dai" width={20} height={20} />
                     </div>
                     <div className="flex lg:hidden flex-row items-center gap-1">
                       <p>• {t('traditionalPaymentMethods')}</p>

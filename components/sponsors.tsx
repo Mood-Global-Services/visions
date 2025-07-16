@@ -45,7 +45,7 @@ export default function Sponsors() {
       imgClasses: 'h-52 mx-6'
     },
     {
-      href: 'https://www.familiae.it/',
+      href: '',
       src: FRG,
       alt: 'Familiae',
       imgClasses: 'h-64 mx-4 brightness-0'
@@ -87,6 +87,9 @@ export default function Sponsors() {
               target="_blank"
               rel="noopener noreferrer"
               className="mx-6 flex-shrink-0"
+              onClick={(e)=>{
+                if(href === "") e.preventDefault()
+              }}
             >
               <img
                 src={src.src}
