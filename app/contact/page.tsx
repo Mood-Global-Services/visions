@@ -204,9 +204,6 @@ export default function ContactPage() {
             <div className="space-y-8">
               <div>
                 <h2 className="text-2xl font-light mb-6">{t('getInTouch')}</h2>
-                <p className="text-gray-600 leading-relaxed mb-8">
-                  {t('contactUsDescription')}
-                </p>
               </div>
 
               {/* Contact Details */}

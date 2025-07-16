@@ -182,11 +182,11 @@ export default function HomePage() {
 
         {/* Exhibition Details */}
         <section className="max-w-7xl mx-auto px-6 py-20">
-          <div className="grid lg:grid-cols-2 gap-16">
-            <div className="relative h-full">
+          <div className="grid lg:grid-cols-2 gap-16 ">
+            <div className="relative h-full min-h-[40vh] lg:min-h-full">
               <h2 className="text-3xl font-light mb-8">{t('aboutExhibition')}</h2>
               <div className="space-y-6 text-gray-600 leading-relaxed overflow-hidden">
-                <Image src={image2} alt="Exhibition" fill className="object-cover rounded-lg" />
+                <Image src={image2} alt="Exhibition" fill className="object-cover rounded-lg " />
               </div>
             </div>
 
