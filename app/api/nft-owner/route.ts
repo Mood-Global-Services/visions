@@ -14,8 +14,7 @@ export async function GET(request: Request) {
 
   try {
     // ← switched to v3/getOwnersForNFT
-    const url = `https://base-sepolia.g.alchemy.com/nft/v3/${alchemyKey}/getOwnersForNFT`
-      + `?contractAddress=${contractAddress}&tokenId=${tokenId}`
+    const url = `https://base-sepolia.g.alchemy.com/nft/v3/${alchemyKey}/getOwnersForNFT?contractAddress=${contractAddress}&tokenId=${tokenId}`
 
     const res  = await fetch(url)
     const text = await res.text()

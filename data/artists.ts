@@ -76,7 +76,7 @@ export const artists: Artist[] = [
           fiatPrice: "900",
           image: w1.src,
           available: true,
-          tokenId: 5
+          tokenId: 29338
         },
         {
           id: 2,
@@ -186,7 +186,7 @@ export const artists: Artist[] = [
           technique: "An installation made with diverse materials that addresses the concept of the relationship between body and machine. What are the political, ethical, social, and aesthetic limits of the body? Contemporary culture has shifted the focus of the hybridization of the body from high-tech laboratories to popular culture. Science fiction, horror literature, and cinema contribute to this theme, emphasizing their ability to record and represent the changes in our lives. The consolidated success of horror and science fiction genres is symptomatic of a new phenomenon that favors the deviant, or the mutant, over more conventional versions of the human being. Precisely for this reason, they provide us with cultural representations appropriate to these changes and transformations. Dream of a Synthetic Body is an attempt to penetrate this rotten imagery, in which the beauty of the anomalous body is oriented toward a representation of the subject within the unity of the body-machine.",
           techniqueIT: "Installazione realizzata con materiali diversi che affronta il concetto di relazione tra corpo e macchina. Quali sono i limiti politici, etici, sociali ed estetici del corpo? La cultura contemporanea ha spostato il focus dell'ibridazione del corpo dai laboratori high-tech alla cultura popolare. Fantascienza, letteratura horror e cinema contribuiscono a sviluppare questo tema, sottolineando la loro capacità di registrare e rappresentare i cambiamenti nelle nostre vite. Il consolidato successo dei generi horror e fantascienza è sintomo di un nuovo fenomeno che preferisce il deviante, o il mutante, alle versioni più convenzionali dell'essere umano. Proprio per questo motivo ci forniscono rappresentazioni culturali adeguate a questi cambiamenti e trasformazioni. Dream of a synthetic body è il tentativo di penetrare l'immaginario putrefatto, in cui la bellezza del corpo anomalo si orienta verso una rappresentazione del soggetto nell'unità del corpo-macchina.",
           provenance: "Studio Clarissa Falco, Savona, Italia",
-          tokenId: 6,
+          tokenId: 1,
         },
       ],
       bio: "Clarissa Falco (Genoa, 1995) earned a Master's degree in Visual Arts and Curatorial Studies at NABA in 2020. obsessive. Recent exhibitions include: Crashing Ceramics, curated by Feng Boyi and Longquan Wangou, in China; 4003, Galleria Ipercubo, Milan (2024); Master Control Program, a performance with K. Jarnuszkiewicz included in the exhibition Adolf Ryszka. Space bears shadow, Zachęta, National Gallery of Art, Warsaw (2023); Maybe One Animal Bit It Twice at ScopeBLN, curated by Boris Kostadinov, Berlin (2023); Frictions, curated by Galleria Monti and Ilaria Monti at the MUG Giannini Museum in Latina (2022); Mirrored in Spectral Machines, with Camilla Alberti, SpazioSerra, Milan (2022).",
