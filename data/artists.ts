@@ -87,7 +87,7 @@ export const artists: Artist[] = [
           available: true,
           description: "Video, colore, 20'’ cad., loop, 2025 (in progress)",
           descriptionIT: "Video, colore, 20'’ cad., loop, 2025 (in progress)",
-          tokenId: 29338
+          tokenId: 1
         },
         {
           id: 2,
@@ -99,6 +99,7 @@ export const artists: Artist[] = [
           fiatPrice: "0.00",
           image: w1_2.src,
           available: true,
+          tokenId: 1,
         },
         {
           id: 3,
@@ -110,6 +111,7 @@ export const artists: Artist[] = [
           fiatPrice: "0",
           image: w1_3.src,
           available: true,
+          tokenId: 1,
         },
         {
           id: 4,
@@ -121,6 +123,7 @@ export const artists: Artist[] = [
           fiatPrice: "0.00",
           image: w1_4.src,
           available: true,
+          tokenId: 1,
         },
         {
           id: 5,
@@ -132,6 +135,7 @@ export const artists: Artist[] = [
           fiatPrice: "0.00",
           image: w1_5.src,
           available: true,
+          tokenId: 1,
         },
         {
           id: 6,
@@ -143,6 +147,7 @@ export const artists: Artist[] = [
           fiatPrice: "0.00",
           image: w1_6.src,
           available: true,
+          tokenId: 1,
         },
         {
           id: 7,
@@ -154,6 +159,7 @@ export const artists: Artist[] = [
           fiatPrice: "0.00",
           image: w1_7.src,
           available: true,
+          tokenId: 1,
         },
         {
           id: 8,
@@ -165,6 +171,7 @@ export const artists: Artist[] = [
           fiatPrice: "0.00",
           image: w1_8.src,
           available: true,
+          tokenId: 1,
         },
         
       ],
@@ -230,7 +237,7 @@ export const artists: Artist[] = [
           techniqueIT: "Animal Cinema è composto unicamente da frammenti di video postati su YouTube che ho collezionato a partire dal 2012. Tutti i video sono accomunati da una comune caratteristica: sono stati girati da animali che si sono trovati faccia a faccia con una videocamera e se ne sono impossessati. Movimenti di corpi, chele, tentacoli, zanne, artigli e zampe si sostituiscono a qualsiasi premeditazione registica. Il risultato è un vortice di forme di consapevolezza e modi di essere in continuo dispiegarsi: una concatenazione di azioni e passioni che apre un inedito spiraglio sul complicato assemblaggio di uomini, animali e tecnologie di cui noi tutti siamo parte. Animal Cinema continua la mia ricerca su forme di creatività non antropocentriche e sul rapporto sensoriale, viscerale, intellettivo ed emotivo, che tali forme evocano.",
           image: w3.src,
           available: true,
-          tokenId: 7
+          tokenId: 1
         },
       ],
       bio: "(Monfalcone, 1989), Ph.D. at Harvard University. He is also Assistant Professor of Media and Film Studies at Skidmore College (NY) and artist in residence at the Broad Institute of MIT and Harvard. His work has been exhibited at the 18th Venice Biennale (Italian Pavilion, Architecture), MAXXI Museum in Rome, Reina Sofia Museum in Madrid, Hermitage Museum in St. Petersburg, The Photographers’ Gallery in London, KANAL – Centre Pompidou in Brussels, MAMbo – Museum of Modern Art in Bologna, Madre – Museum of Contemporary Art in Naples, Museum of Contemporary Art in Zagreb, Museu de Ciències Naturals in Barcelona, Museo Nacional Bellas Artes in Santiago de Chile, Museum of Contemporary Art Vojvodina in Novi Sad (Serbia), the MBAL Museum (Switzerland), the National Art Center in Tokyo, the Eyebeam Art + Technology Center in New York, the Off – Cairo Biennale, the BJCEM – Mediterranean Biennale, and the Kiev Biennale. His films have been screened at the Toronto Images Festival, the Torino Film Festival, Jeu de Paume (Paris), HKW – Haus der Kulturen der Welt (Berlin), and at numerous media arts festivals, including the EMAF – European Media Art Festival in Osnabrück, the JMAF – Japan Media Arts Festival in Tokyo, the Filmwinter – Festival for Expanded Media in Stuttgart, and the NYEAF – New York Electronic Arts Festival. Vavarella has received numerous awards and recognitions and has won numerous artistic and scientific calls and competitions. Among the most significant are the Italian Council Award (2019) and the Harvard Horizon Fellowship (2023). His work appears regularly in newspapers, trade magazines, and scientific publications.",
@@ -263,7 +270,7 @@ export const artists: Artist[] = [
           technique: "Spy (Fountain v.3) is a surveillance tool composed of a glass sculpture. Like a small, independent organism, this module, called Spy, observes us via a facial recognition system. It thus takes control of the hierarchy of vision and whispers to us the persistent power dynamics of the present. The sculpture is connected to an oxygen concentrator that continuously releases invisible gas into the exhibition space and, in particular, onto the observing viewer. This manifestation of the sculpture aims to restabilize lifeless scenarios by supplying us with a substance essential to our survival: oxygen. Excessive oxygen intake sends a message to the brain to slow breathing and induces states of trance and relaxation, while too little oxygen deprives the tissues in the brain and heart of oxygen and causes memory loss or cardiac irregularities, anxiety, and death. One has the sensation of being in front of a sophisticated, transparent fountain that nourishes and oxygenates our body. According to the artist, this object is a psychic filter. It observes us and feeds us as if we have lost control of both our vision and our psyche.",
           techniqueIT: "Spia (Fontana v.3) è uno strumento di sorveglianza composto da una scultura di vetro. Come un piccolo organismo indipendente, questo modulo, denominato Spia, ci osserva tramite un sistema di riconoscimento facciale. Prende quindi il controllo della gerarchia della visione e ci sussurra le persistenti dinamiche di potere del presente. La scultura è collegata a un concentratore di ossigeno che rilascia continuamente gas invisibile nello spazio espositivo ed in particolare sullo spettatore che osserva. Questo manifestarsi della scultura ha la pretesa di ristabilizzare scenari privi di vita rifornendoci di una sostanza indispensabile per la nostra sopravvivenza, l’ossigeno. L’assunzione di un’eccessiva quantità di ossigeno invia un messaggio al cervello di rallentare la respirazione e induce stati di trans e rilassamento, mentre troppo poco ossigeno priva i tessuti nel cervello e nel cuore di ossigeno e causa perdita di memoria o irregolarità cardiache, ansia e morte. Si ha la sensazione di trovarsi di fronte ad una sofisticata e trasparente fontana che nutre e ossigena il nostro corpo. Questo oggetto secondo l’artista è un filtro psichico. Ci osserva e ci nutre come se avessimo perso il controllo sia della nostra visione che della nostra psiche.",
           provenance: "Studio Lorenzo Lunghi, Milano, Italia",
-          tokenId: 8,
+          tokenId: 1,
         },
         {
           id: 2,
@@ -280,7 +287,7 @@ export const artists: Artist[] = [
           technique: "Vomito (Vomito) is a series of sculptures of an indigestible nature, the result of widespread malaise in sculptural form. Exhausted by the frustration, anxiety, and performative discomfort that lurk in the cultural landscape, all that remains is to vomit. In this most extreme manifestation of the body, the artist seeks to exaggerate and make visible what cannot be said out loud, but is deeply felt.",
           techniqueIT: "Vomito è una serie di sculture di natura indigesta, frutto di malessere generalizzato in aspetto scultoreo. Esausto dalle situazioni di frustrazione, ansia e disagio performativo che si annidano nel panorama culturale, non resta che vomitare. In questa manifestazione del corpo più estrema, si cerca di esasperare e rendere visibile quello che non si può dire ad alta voce, ma che in fondo si pensa.",
           provenance: "Studio Lorenzo Lunghi, Milano, Italia",
-          tokenId: 4,
+          tokenId: 1,
         },
         {
           id: 3,
@@ -297,7 +304,7 @@ export const artists: Artist[] = [
           technique: "Vomito (Vomito) is a series of sculptures of an indigestible nature, the result of widespread malaise in sculptural form. Exhausted by the frustration, anxiety, and performative discomfort that lurk in the cultural landscape, all that remains is to vomit. In this most extreme manifestation of the body, the artist seeks to exaggerate and make visible what cannot be said out loud, but is deeply felt.",
           techniqueIT: "Vomito è una serie di sculture di natura indigesta, frutto di malessere generalizzato in aspetto scultoreo. Esausto dalle situazioni di frustrazione, ansia e disagio performativo che si annidano nel panorama culturale, non resta che vomitare. In questa manifestazione del corpo più estrema, si cerca di esasperare e rendere visibile quello che non si può dire ad alta voce, ma che in fondo si pensa.",
           provenance: "Studio Lorenzo Lunghi, Milano, Italia",
-          tokenId: 9,
+          tokenId: 1,
         },
         {
           id: 4,
@@ -314,7 +321,7 @@ export const artists: Artist[] = [
           technique: "Vomito (Vomito) is a series of sculptures of an indigestible nature, the result of widespread malaise in sculptural form. Exhausted by the frustration, anxiety, and performative discomfort that lurk in the cultural landscape, all that remains is to vomit. In this most extreme manifestation of the body, the artist seeks to exaggerate and make visible what cannot be said out loud, but is deeply felt.",
           techniqueIT: "Vomito è una serie di sculture di natura indigesta, frutto di malessere generalizzato in aspetto scultoreo. Esausto dalle situazioni di frustrazione, ansia e disagio performativo che si annidano nel panorama culturale, non resta che vomitare. In questa manifestazione del corpo più estrema, si cerca di esasperare e rendere visibile quello che non si può dire ad alta voce, ma che in fondo si pensa.",
           provenance: "Studio Lorenzo Lunghi, Milano, Italia",
-          tokenId: 9,
+          tokenId: 1,
         },
       ],
       bio: "(Crema, 1993) lives and works in Milan. After a three-year degree at the Accademia Carrara, Bergamo (2018), he obtained a Master's degree at HEAD, Geneva (2021). He has exhibited in various contexts, including: Bacio (Bern, 2024) La Rada (Locarno, 2023); Manifattura Tabacchi (Florence, 2022); Plattform (Kulturhaus Palazzo, 2022); Giulietta (Basel, 2021); ANCONTEMPORANEA (Ancona, 2021); Localedue (Bologna, 2021); Palazzo delle Esposizioni (Rome, 2020); Sonnenstube (Spazio Morel, 2019). He was part of the DITTO collective (2016-2019). Since 2019, he has curated exhibitions and workshops in extra-urban spaces: Brillano nella notte (Dolomiti Contemporanee, 2023-ongoing), Erbacce (Brugherio, 2020), and Miraggio (Fontanile Fontanone, 2019).",
