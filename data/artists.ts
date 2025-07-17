@@ -6,7 +6,14 @@ import a3 from "@/assets/images/artists/EmilioVavarella.webp"
 import a4 from "@/assets/images/artists/LorenzoLunghi.webp"
 
 // Adriano Tenore works
-import w1 from "@/assets/images/artworks/AdrianoTenore/1.webp"
+import w1_1 from "@/assets/images/artworks/AdrianoTenore/2.webp"
+import w1_2 from "@/assets/images/artworks/AdrianoTenore/3.webp"
+import w1_3 from "@/assets/images/artworks/AdrianoTenore/4.webp"
+import w1_4 from "@/assets/images/artworks/AdrianoTenore/5.webp"
+import w1_5 from "@/assets/images/artworks/AdrianoTenore/6.webp"
+import w1_6 from "@/assets/images/artworks/AdrianoTenore/7.webp"
+import w1_7 from "@/assets/images/artworks/AdrianoTenore/8.webp"
+import w1_8 from "@/assets/images/artworks/AdrianoTenore/9.webp"
 
 // Clarissa Falco
 import w2 from "@/assets/images/artworks/ClarissaFalco/1.webp"
@@ -15,8 +22,10 @@ import w2 from "@/assets/images/artworks/ClarissaFalco/1.webp"
 import w3 from "@/assets/images/artworks/EmilioVavarella/1.webp"
 
 // Lorenzo Lunghi
-import w4 from "@/assets/images/artworks/LorenzoLunghi/1.webp"
-import w5 from "@/assets/images/artworks/LorenzoLunghi/2.webp"
+import w4_1 from "@/assets/images/artworks/LorenzoLunghi/1.webp"
+import w4_2 from "@/assets/images/artworks/LorenzoLunghi/2.webp"
+import w4_3 from "@/assets/images/artworks/LorenzoLunghi/2.webp"
+import w4_4 from "@/assets/images/artworks/LorenzoLunghi/2.webp"
 
 export interface Artist {
     id: string
@@ -74,7 +83,7 @@ export const artists: Artist[] = [
           year: "2024",
           price: "0.35",
           fiatPrice: "900",
-          image: w1.src,
+          image: w1_1.src,
           available: true,
           description: "Video, colore, 20'’ cad., loop, 2025 (in progress)",
           descriptionIT: "Video, colore, 20'’ cad., loop, 2025 (in progress)",
@@ -88,7 +97,7 @@ export const artists: Artist[] = [
           year: "2024",
           price: "0.00",
           fiatPrice: "0.00",
-          image: placeholder.src,
+          image: w1_2.src,
           available: true,
         },
         {
@@ -99,7 +108,7 @@ export const artists: Artist[] = [
           year: "2024",
           price: "0.00",
           fiatPrice: "0",
-          image: placeholder.src,
+          image: w1_3.src,
           available: true,
         },
         {
@@ -110,7 +119,7 @@ export const artists: Artist[] = [
           year: "2024",
           price: "0.00",
           fiatPrice: "0.00",
-          image: placeholder.src,
+          image: w1_4.src,
           available: true,
         },
         {
@@ -121,7 +130,7 @@ export const artists: Artist[] = [
           year: "2024",
           price: "0.00",
           fiatPrice: "0.00",
-          image: placeholder.src,
+          image: w1_5.src,
           available: true,
         },
         {
@@ -132,7 +141,7 @@ export const artists: Artist[] = [
           year: "2024",
           price: "0.00",
           fiatPrice: "0.00",
-          image: placeholder.src,
+          image: w1_6.src,
           available: true,
         },
         {
@@ -143,7 +152,7 @@ export const artists: Artist[] = [
           year: "2024",
           price: "0.00",
           fiatPrice: "0.00",
-          image: placeholder.src,
+          image: w1_7.src,
           available: true,
         },
         {
@@ -154,9 +163,10 @@ export const artists: Artist[] = [
           year: "2024",
           price: "0.00",
           fiatPrice: "0.00",
-          image: placeholder.src,
+          image: w1_8.src,
           available: true,
         },
+        
       ],
       bio: "(Naples, 1991) is an Italian-French multimedia artist. Today he works as a CG Lead and Art Director, with an increasingly strong interest in interactive design and immersive experiences based on Artificial Intelligence. His works reflect on the relationship between humans and AI, questioning the boundaries of transhumanism and experimenting with new connections between nature and technology. Among his most recent exhibitions: Water me (2025); Synthetic Bestiary (La Santissima, Naples, 2025); Exodus (Fondazione Morra Greco, Naples, 2024; Casa delle Donne, Rome); ZTA (Naples); Kung flu (LightBox.NY Studios, 2018); Onironautica (Ex Asilo Filangieri, Naples, 2016).",
       bioIT: "(Napoli, 1991) è un artista multimediale italo-francese. Oggi lavora come CG Lead e Art Director, con un interesse sempre più marcato verso il design interattivo e le esperienze immersive basate sull’Intelligenza Artificiale. Le sue opere riflettono sul rapporto tra umano e AI, mettendo in discussione i confini del transumanesimo e sperimentando nuove connessioni tra natura e tecnologia. Tra le mostre più recenti: Water me (2025); Bestiario sintetico (La Santissima, Napoli, 2025); Exodus (Fondazione Morra Greco, Napoli, 2024; Casa delle Donne, Roma); ZTA (Napoli); Kung flu (LightBox.NY Studios, 2018); Onironautica (Ex Asilo Filangieri, Napoli, 2016).",
@@ -248,7 +258,7 @@ export const artists: Artist[] = [
           year: "2024",
           price: "0.01",
           fiatPrice: "3500",
-          image: w4.src,
+          image: w4_1.src,
           available: true,
           technique: "Spy (Fountain v.3) is a surveillance tool composed of a glass sculpture. Like a small, independent organism, this module, called Spy, observes us via a facial recognition system. It thus takes control of the hierarchy of vision and whispers to us the persistent power dynamics of the present. The sculpture is connected to an oxygen concentrator that continuously releases invisible gas into the exhibition space and, in particular, onto the observing viewer. This manifestation of the sculpture aims to restabilize lifeless scenarios by supplying us with a substance essential to our survival: oxygen. Excessive oxygen intake sends a message to the brain to slow breathing and induces states of trance and relaxation, while too little oxygen deprives the tissues in the brain and heart of oxygen and causes memory loss or cardiac irregularities, anxiety, and death. One has the sensation of being in front of a sophisticated, transparent fountain that nourishes and oxygenates our body. According to the artist, this object is a psychic filter. It observes us and feeds us as if we have lost control of both our vision and our psyche.",
           techniqueIT: "Spia (Fontana v.3) è uno strumento di sorveglianza composto da una scultura di vetro. Come un piccolo organismo indipendente, questo modulo, denominato Spia, ci osserva tramite un sistema di riconoscimento facciale. Prende quindi il controllo della gerarchia della visione e ci sussurra le persistenti dinamiche di potere del presente. La scultura è collegata a un concentratore di ossigeno che rilascia continuamente gas invisibile nello spazio espositivo ed in particolare sullo spettatore che osserva. Questo manifestarsi della scultura ha la pretesa di ristabilizzare scenari privi di vita rifornendoci di una sostanza indispensabile per la nostra sopravvivenza, l’ossigeno. L’assunzione di un’eccessiva quantità di ossigeno invia un messaggio al cervello di rallentare la respirazione e induce stati di trans e rilassamento, mentre troppo poco ossigeno priva i tessuti nel cervello e nel cuore di ossigeno e causa perdita di memoria o irregolarità cardiache, ansia e morte. Si ha la sensazione di trovarsi di fronte ad una sofisticata e trasparente fontana che nutre e ossigena il nostro corpo. Questo oggetto secondo l’artista è un filtro psichico. Ci osserva e ci nutre come se avessimo perso il controllo sia della nostra visione che della nostra psiche.",
@@ -265,7 +275,7 @@ export const artists: Artist[] = [
           year: "2024",
           price: "0.01",
           fiatPrice: "2500",
-          image: w5.src,
+          image: w4_2.src,
           available: true,
           technique: "Vomito (Vomito) is a series of sculptures of an indigestible nature, the result of widespread malaise in sculptural form. Exhausted by the frustration, anxiety, and performative discomfort that lurk in the cultural landscape, all that remains is to vomit. In this most extreme manifestation of the body, the artist seeks to exaggerate and make visible what cannot be said out loud, but is deeply felt.",
           techniqueIT: "Vomito è una serie di sculture di natura indigesta, frutto di malessere generalizzato in aspetto scultoreo. Esausto dalle situazioni di frustrazione, ansia e disagio performativo che si annidano nel panorama culturale, non resta che vomitare. In questa manifestazione del corpo più estrema, si cerca di esasperare e rendere visibile quello che non si può dire ad alta voce, ma che in fondo si pensa.",
@@ -282,7 +292,7 @@ export const artists: Artist[] = [
           year: "2024",
           price: "0.01",
           fiatPrice: "2500",
-          image: w5.src,
+          image: w4_3.src,
           available: true,
           technique: "Vomito (Vomito) is a series of sculptures of an indigestible nature, the result of widespread malaise in sculptural form. Exhausted by the frustration, anxiety, and performative discomfort that lurk in the cultural landscape, all that remains is to vomit. In this most extreme manifestation of the body, the artist seeks to exaggerate and make visible what cannot be said out loud, but is deeply felt.",
           techniqueIT: "Vomito è una serie di sculture di natura indigesta, frutto di malessere generalizzato in aspetto scultoreo. Esausto dalle situazioni di frustrazione, ansia e disagio performativo che si annidano nel panorama culturale, non resta che vomitare. In questa manifestazione del corpo più estrema, si cerca di esasperare e rendere visibile quello che non si può dire ad alta voce, ma che in fondo si pensa.",
@@ -299,7 +309,7 @@ export const artists: Artist[] = [
           year: "2024",
           price: "0.01",
           fiatPrice: "2500",
-          image: w5.src,
+          image: w4_4.src,
           available: true,
           technique: "Vomito (Vomito) is a series of sculptures of an indigestible nature, the result of widespread malaise in sculptural form. Exhausted by the frustration, anxiety, and performative discomfort that lurk in the cultural landscape, all that remains is to vomit. In this most extreme manifestation of the body, the artist seeks to exaggerate and make visible what cannot be said out loud, but is deeply felt.",
           techniqueIT: "Vomito è una serie di sculture di natura indigesta, frutto di malessere generalizzato in aspetto scultoreo. Esausto dalle situazioni di frustrazione, ansia e disagio performativo che si annidano nel panorama culturale, non resta che vomitare. In questa manifestazione del corpo più estrema, si cerca di esasperare e rendere visibile quello che non si può dire ad alta voce, ma che in fondo si pensa.",
