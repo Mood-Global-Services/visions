@@ -16,6 +16,26 @@ import Newsletter from "@/components/newsletter"
 import MobileMenu from "@/components/mobileMenu"
 import { useState, useEffect } from "react"
 
+import i1 from "@/assets/images/installation/1.webp"
+import i2 from "@/assets/images/installation/2.webp"
+import i3 from "@/assets/images/installation/3.webp"
+import i4 from "@/assets/images/installation/4.webp"
+import i5 from "@/assets/images/installation/5.webp"
+import i6 from "@/assets/images/installation/6.webp"
+import i7 from "@/assets/images/installation/7.webp"
+import i8 from "@/assets/images/installation/8.webp"
+import i9 from "@/assets/images/installation/9.webp"
+import i10 from "@/assets/images/installation/10.webp"
+import i11 from "@/assets/images/installation/11.webp"
+import i12 from "@/assets/images/installation/12.webp"
+import i13 from "@/assets/images/installation/13.webp"
+import i14 from "@/assets/images/installation/14.webp"
+import i15 from "@/assets/images/installation/15.webp"
+import i16 from "@/assets/images/installation/16.webp"
+import i17 from "@/assets/images/installation/17.webp"
+import i18 from "@/assets/images/installation/18.webp"
+import i19 from "@/assets/images/installation/19.webp"
+
 
 export default function ExhibitionPage() {
     const { t } = useTranslation()
@@ -158,7 +178,7 @@ export default function ExhibitionPage() {
                                     <Card className="border-0 shadow-lg overflow-hidden">
                                         <CardContent className="p-0">
                                             <img
-                                                src={placeholder.src}
+                                                src={i1.src}
                                                 alt="Villa Doria D'Angri interior"
                                                 className="w-full h-64 object-cover"
                                             />
@@ -167,7 +187,7 @@ export default function ExhibitionPage() {
                                     <Card className="border-0 shadow-lg overflow-hidden">
                                         <CardContent className="p-0">
                                             <img
-                                                src={placeholder.src}
+                                                src={i2.src}
                                                 alt="Villa Doria D'Angri interior"
                                                 className="w-full h-64 object-cover"
                                             />
@@ -176,7 +196,7 @@ export default function ExhibitionPage() {
                                     <Card className="border-0 shadow-lg overflow-hidden">
                                         <CardContent className="p-0">
                                             <img
-                                                src={placeholder.src}
+                                                src={i3.src}
                                                 alt="Villa Doria D'Angri interior"
                                                 className="w-full h-64 object-cover"
                                             />
@@ -185,7 +205,142 @@ export default function ExhibitionPage() {
                                     <Card className="border-0 shadow-lg overflow-hidden">
                                         <CardContent className="p-0">
                                             <img
-                                                src={placeholder.src}
+                                                src={i4.src}
+                                                alt="Villa Doria D'Angri interior"
+                                                className="w-full h-64 object-cover"
+                                            />
+                                        </CardContent>
+                                    </Card>
+                                    <Card className="border-0 shadow-lg overflow-hidden">
+                                        <CardContent className="p-0">
+                                            <img
+                                                src={i5.src}
+                                                alt="Villa Doria D'Angri interior"
+                                                className="w-full h-64 object-cover"
+                                            />
+                                        </CardContent>
+                                    </Card>
+                                    <Card className="border-0 shadow-lg overflow-hidden">
+                                        <CardContent className="p-0">
+                                            <img
+                                                src={i6.src}
+                                                alt="Villa Doria D'Angri interior"
+                                                className="w-full h-64 object-cover"
+                                            />
+                                        </CardContent>
+                                    </Card>
+                                    <Card className="border-0 shadow-lg overflow-hidden">
+                                        <CardContent className="p-0">
+                                            <img
+                                                src={i7.src}
+                                                alt="Villa Doria D'Angri interior"
+                                                className="w-full h-64 object-cover"
+                                            />
+                                        </CardContent>
+                                    </Card>
+                                    <Card className="border-0 shadow-lg overflow-hidden">
+                                        <CardContent className="p-0">
+                                            <img
+                                                src={i8.src}
+                                                alt="Villa Doria D'Angri interior"
+                                                className="w-full h-64 object-cover"
+                                            />
+                                        </CardContent>
+                                    </Card>
+                                    <Card className="border-0 shadow-lg overflow-hidden">
+                                        <CardContent className="p-0">
+                                            <img
+                                                src={i9.src}
+                                                alt="Villa Doria D'Angri interior"
+                                                className="w-full h-64 object-cover"
+                                            />
+                                        </CardContent>
+                                    </Card>
+                                    <Card className="border-0 shadow-lg overflow-hidden">
+                                        <CardContent className="p-0">
+                                            <img
+                                                src={i10.src}
+                                                alt="Villa Doria D'Angri interior"
+                                                className="w-full h-64 object-cover"
+                                            />
+                                        </CardContent>
+                                    </Card>
+                                    <Card className="border-0 shadow-lg overflow-hidden">
+                                        <CardContent className="p-0">
+                                            <img
+                                                src={i11.src}
+                                                alt="Villa Doria D'Angri interior"
+                                                className="w-full h-64 object-cover"
+                                            />
+                                        </CardContent>
+                                    </Card>
+                                    <Card className="border-0 shadow-lg overflow-hidden">
+                                        <CardContent className="p-0">
+                                            <img
+                                                src={i12.src}
+                                                alt="Villa Doria D'Angri interior"
+                                                className="w-full h-64 object-cover"
+                                            />
+                                        </CardContent>
+                                    </Card>
+                                    <Card className="border-0 shadow-lg overflow-hidden">
+                                        <CardContent className="p-0">
+                                            <img
+                                                src={i13.src}
+                                                alt="Villa Doria D'Angri interior"
+                                                className="w-full h-64 object-cover"
+                                            />
+                                        </CardContent>
+                                    </Card>
+                                    <Card className="border-0 shadow-lg overflow-hidden">
+                                        <CardContent className="p-0">
+                                            <img
+                                                src={i14.src}
+                                                alt="Villa Doria D'Angri interior"
+                                                className="w-full h-64 object-cover"
+                                            />
+                                        </CardContent>
+                                    </Card>
+                                    <Card className="border-0 shadow-lg overflow-hidden">
+                                        <CardContent className="p-0">
+                                            <img
+                                                src={i15.src}
+                                                alt="Villa Doria D'Angri interior"
+                                                className="w-full h-64 object-cover"
+                                            />
+                                        </CardContent>
+                                    </Card>
+                                    <Card className="border-0 shadow-lg overflow-hidden">
+                                        <CardContent className="p-0">
+                                            <img
+                                                src={i16.src}
+                                                alt="Villa Doria D'Angri interior"
+                                                className="w-full h-64 object-cover"
+                                            />
+                                        </CardContent>
+                                    </Card>
+                                    <Card className="border-0 shadow-lg overflow-hidden">
+                                        <CardContent className="p-0">
+                                            <img
+                                                src={i17.src}
+                                                alt="Villa Doria D'Angri interior"
+                                                className="w-full h-64 object-cover"
+                                            />
+                                        </CardContent>
+                                    </Card>
+                                    <Card className="border-0 shadow-lg overflow-hidden">
+                                        <CardContent className="p-0">
+                                            <img
+                                                src={i18.src}
+                                                alt="Villa Doria D'Angri interior"
+                                                className="w-full h-64 object-cover"
+                                            />
+                                        </CardContent>
+                                    </Card>
+                                    <Card className="border-0 shadow-lg overflow-hidden">
+                                        <CardContent className="p-0">
+                                            <img
+                                                src={i19.src}
                                                 alt="Villa Doria D'Angri interior"
                                                 className="w-full h-64 object-cover"
                                             />
