@@ -62,15 +62,13 @@ function EmbeddedCheckoutInner({
 
   return (
     <CrossmintEmbeddedCheckout
-      lineItems={[
-        {
-          tokenLocator: `base:${process.env.NEXT_PUBLIC_SEPOLIA_CONTRACT_ADDRESS!}:${work.tokenId}`,
-          callData: {
-            totalPrice: work.price,
-            quantity: 1,
-          },
+      lineItems={{
+        collectionLocator: work.collectionLocator!,
+        callData: {
+          totalPrice: "0.001",
+          quantity: 1,
         },
-      ]}
+      }}
       payment={{
         crypto: { enabled: true },
         fiat: { enabled: true },

@@ -7,7 +7,7 @@ import PurchaseModal from "./purchase-modal"
 import { useTranslation } from 'react-i18next'
 import i18n from "@/i18n/client"
 import { useEthConversion } from '@/hooks/useEthConversion'
-
+import { Loader2 } from "lucide-react"
 interface ArtworkCardProps {
     work: DetailedWork
 }
@@ -20,7 +20,7 @@ const ArtworkCard = ({ work }: ArtworkCardProps) => {
     const { eurPerEth, loading: priceLoading } = useEthConversion()
 
     const fiat = parseFloat(work.fiatPrice.replace('€', '').replace(',', '.')) // if fiatPrice is a string
-    const ethFromFiat = eurPerEth ? (fiat / eurPerEth).toFixed(4) : '0.00'
+    const ethFromFiat = eurPerEth ? (fiat / eurPerEth).toFixed(4).toString() : '0.00'
 
     return (
         <div key={work.id} className="grid md:grid-cols-2 gap-12 items-start">
@@ -53,12 +53,20 @@ const ArtworkCard = ({ work }: ArtworkCardProps) => {
                     </div>
                 </div>
 
+                {
+                    loading ? (
+                        <div className="flex flex-row items-center justify-start h-full">
+                            <Loader2 className="w-4 h-4 animate-spin" />
+                        </div>
+                    ) : (
+                        available ? (
+                            <PurchaseModal work={work} />
+                        ) : (
+                            <Button disabled className="bg-gray-100 text-gray-400">{t('sold')}</Button>
+                        )
+                    )
+                }
 
-                {available ? (
-                    <PurchaseModal work={work} price={ethFromFiat} />
-                ) : (
-                    <Button disabled className="bg-gray-100 text-gray-400">{t('sold')}</Button>
-                )}
             </div>
         </div>
     )
