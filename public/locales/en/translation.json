@@ -122,5 +122,7 @@
   "texts": "Texts",
   "translations": "Translations",
   "thanksTo": "Thanks to",
-  "photoCredits": "Photo credits"
+  "photoCredits": "Photo credits",
+  "comingSoon": "This artwork will be available soon",
+  "comingSoonSimple": "Coming Soon"
 }

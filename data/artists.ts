@@ -100,7 +100,7 @@ export const artists: Artist[] = [
           price: "0.00",
           fiatPrice: "0.00",
           image: w1_2.src,
-          available: true,
+          available: false,
           tokenId: 1,
           collectionLocator: "crossmint:1b4b7b0d-1621-4591-86da-f3eea9c4c507"
         },
@@ -113,7 +113,7 @@ export const artists: Artist[] = [
           price: "0.00",
           fiatPrice: "0",
           image: w1_3.src,
-          available: true,
+          available: false,
           tokenId: 1,
           collectionLocator: "crossmint:1b4b7b0d-1621-4591-86da-f3eea9c4c507"
         },
@@ -126,7 +126,7 @@ export const artists: Artist[] = [
           price: "0.00",
           fiatPrice: "0.00",
           image: w1_4.src,
-          available: true,
+          available: false,
           tokenId: 1,
           collectionLocator: "crossmint:1b4b7b0d-1621-4591-86da-f3eea9c4c507"
         },
@@ -139,7 +139,7 @@ export const artists: Artist[] = [
           price: "0.00",
           fiatPrice: "0.00",
           image: w1_5.src,
-          available: true,
+          available: false,
           tokenId: 1,
           collectionLocator: "crossmint:1b4b7b0d-1621-4591-86da-f3eea9c4c507"
         },
@@ -152,7 +152,7 @@ export const artists: Artist[] = [
           price: "0.00",
           fiatPrice: "0.00",
           image: w1_6.src,
-          available: true,
+          available: false,
           tokenId: 1,
           collectionLocator: "crossmint:1b4b7b0d-1621-4591-86da-f3eea9c4c507"
         },
@@ -165,7 +165,7 @@ export const artists: Artist[] = [
           price: "0.00",
           fiatPrice: "0.00",
           image: w1_7.src,
-          available: true,
+          available: false,
           tokenId: 1,
           collectionLocator: "crossmint:1b4b7b0d-1621-4591-86da-f3eea9c4c507"
         },
@@ -178,7 +178,7 @@ export const artists: Artist[] = [
           price: "0.00",
           fiatPrice: "0.00",
           image: w1_8.src,
-          available: true,
+          available: false,
           tokenId: 1,
           collectionLocator: "crossmint:1b4b7b0d-1621-4591-86da-f3eea9c4c507"
         },

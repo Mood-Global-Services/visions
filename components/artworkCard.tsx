@@ -59,11 +59,14 @@ const ArtworkCard = ({ work }: ArtworkCardProps) => {
                             <Loader2 className="w-4 h-4 animate-spin" />
                         </div>
                     ) : (
-                        available ? (
-                            <PurchaseModal work={work} />
-                        ) : (
-                            <Button disabled className="bg-gray-100 text-gray-400">{t('sold')}</Button>
-                        )
+                        work.available ?
+                            available ? (
+                                <PurchaseModal work={work} />
+                            ) : (
+                                <Button disabled className="bg-gray-100 text-gray-400">{t('sold')}</Button>
+                            ) : (
+                                <Button disabled className="bg-gray-100 text-gray-400">{t('comingSoon')}</Button>
+                            )
                     )
                 }
 
