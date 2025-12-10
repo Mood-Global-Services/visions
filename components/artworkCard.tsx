@@ -55,7 +55,7 @@ const ArtworkCard = ({ work }: ArtworkCardProps) => {
 
                 {
                     loading ? (
-                        <div className="flex flex-row items-center justify-start h-full">
+                        <div className="flex flex-row items-center justify-start h-full"> {/* TODO: add a loading spinner */}
                             <Loader2 className="w-4 h-4 animate-spin" />
                         </div>
                     ) : (
